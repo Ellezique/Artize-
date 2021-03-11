@@ -11,8 +11,11 @@
   </head>
 
   <body>
-      <!--<p class="notice"><%= notice %></p>-->
-      <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <%= render "partials/navbar"%>
+        <!--<p class="notice"><%= notice %></p>-->
+        <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>

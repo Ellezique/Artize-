@@ -1,0 +1,59 @@
+commit 8f6aeb9a9352ad2e6d4ea24ac958100cb661d095
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 14:42:25 2021 +1000
+
+    Add jumbotron to home page
+
+commit 4577d4cf49da4a39434aeca5f7e55b370b17a720
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 14:21:00 2021 +1000
+
+    Create Navbar
+
+commit aff62a979e9ce20170f2ee3d91c6e82625989f41
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:56:36 2021 +1000
+
+    Update Bootstrap to version 4.5.2 and related changes
+
+commit 06f29e134c108a36e38f5070ba560fa9fcd72881
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:40:10 2021 +1000
+
+    Install devise, generate User model, migrate database, run server and check that it works
+
+commit 5f64f7e1512a36bafdc0d24b891570960eac9d63
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:25:31 2021 +1000
+
+    Install Simple Form gem
+
+commit e7b6aa4d725d865a2f186cfe208c702c13705217
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:22:21 2021 +1000
+
+    Install Bootstrap 3 for Sass gem and verify that it works by running rails server noting font change
+
+commit e8f2ff415dadac2d5b299b75ac0bcbfbe2fc19ef
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:07:02 2021 +1000
+
+    Generate home page controller
+
+commit a3eead6e3325eda95aa0473631b088df7b00e438
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 12:59:38 2021 +1000
+
+    First database migrate
+
+commit 57e490ec65665259ed52a7fc29e9bd6b301df350
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 12:53:15 2021 +1000
+
+    Update database.yml file with username, password, localhost and port 5432
+
+commit c470f7b185105c61356a6e3fe74976abafa3a68a
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 12:50:10 2021 +1000
+
+    New rails app intitialized, first commit

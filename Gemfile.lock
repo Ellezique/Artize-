@@ -84,6 +84,13 @@ GEM
       xpath (~> 3.2)
     childprocess (3.0.0)
     concurrent-ruby (1.1.8)
+    countries (3.0.1)
+      i18n_data (~> 0.10.0)
+      sixarm_ruby_unaccent (~> 1.1)
+      unicode_utils (~> 1.4)
+    country_select (5.0.1)
+      countries (~> 3.0)
+      sort_alphabetical (~> 1.1)
     crass (1.0.6)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -98,6 +105,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
+    i18n_data (0.10.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jquery-rails (4.4.0)
@@ -190,6 +198,9 @@ GEM
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    sixarm_ruby_unaccent (1.2.0)
+    sort_alphabetical (1.1.0)
+      unicode_utils (>= 1.2.2)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -205,6 +216,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    unicode_utils (1.4.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -236,6 +248,7 @@ DEPENDENCIES
   bootstrap (~> 4.5.2)
   byebug
   capybara (>= 3.26)
+  country_select
   devise
   jbuilder (~> 2.7)
   jquery-rails

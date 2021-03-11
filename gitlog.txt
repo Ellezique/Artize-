@@ -1,3 +1,9 @@
+commit ae80b1189469ef38f1e46c46962a351767cb417e
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 15:36:57 2021 +1000
+
+    Generate scaffold Profile, migrate database and add associations
+
 commit 8f6aeb9a9352ad2e6d4ea24ac958100cb661d095
 Author: Ellezique <gizellevanzyl@gmail.com>
 Date:   Thu Mar 11 14:42:25 2021 +1000

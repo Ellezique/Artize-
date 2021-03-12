@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#page"
   
-  # http://localhost:3000/profiles
+  # http://localhost:3000/profiles   MUST BE RESTRICTED TO ADMIN AND USER CREATING IT.
   get "/", to: "profiles#index"
 
 end

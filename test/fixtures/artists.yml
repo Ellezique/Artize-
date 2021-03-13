@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  about_artist: MyText
+  profile: one
+
+two:
+  about_artist: MyText
+  profile: two

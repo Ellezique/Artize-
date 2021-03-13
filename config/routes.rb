@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :styles
   resources :artists
   resources :orderitems
   resources :orders

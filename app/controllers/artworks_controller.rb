@@ -1,7 +1,6 @@
 class ArtworksController < ApplicationController
   before_action :set_artwork, only: %i[ show edit update destroy ]
-  has_one_attached :artimage
-  
+   
   # GET /artworks or /artworks.json
   def index
     @artworks = Artwork.all
@@ -33,6 +32,8 @@ class ArtworksController < ApplicationController
         format.json { render json: @artwork.errors, status: :unprocessable_entity }
       end
     end
+    #Upload image to cloudinary and attach to artwork.Image permitted in params below.
+    artwork.artimage.attach(artwork_params[:artimage])
   end
 
   # PATCH/PUT /artworks/1 or /artworks/1.json
@@ -65,6 +66,6 @@ class ArtworksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artwork_params
-      params.require(:artwork).permit(:art_title, :art_description, :art_price, :available, :orderitem_id, :artist_id, :style_id, :artmedium_id)
+      params.require(:artwork).permit(:art_title, :artimage, :art_description, :art_price, :available, :orderitem_id, :artist_id, :style_id, :artmedium_id)
     end
 end

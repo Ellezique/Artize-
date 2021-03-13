@@ -1,6 +1,7 @@
 class ArtworksController < ApplicationController
   before_action :set_artwork, only: %i[ show edit update destroy ]
-
+  has_one_attached :artimage
+  
   # GET /artworks or /artworks.json
   def index
     @artworks = Artwork.all

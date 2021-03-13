@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Artmedia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artmedium description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artmedia.each do |artmedium| %>
+      <tr>
+        <td><%= artmedium.artmedium_description %></td>
+        <td><%= link_to 'Show', artmedium %></td>
+        <td><%= link_to 'Edit', edit_artmedium_path(artmedium) %></td>
+        <td><%= link_to 'Destroy', artmedium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artmedium', new_artmedium_path %>

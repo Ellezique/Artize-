@@ -1,0 +1,2 @@
+class Artmedium < ApplicationRecord
+end

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Art title:</strong>
+  <%= @artwork.art_title %>
+</p>
+
+<p>
+  <strong>Art description:</strong>
+  <%= @artwork.art_description %>
+</p>
+
+<p>
+  <strong>Art price:</strong>
+  <%= @artwork.art_price %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @artwork.available %>
+</p>
+
+<p>
+  <strong>Orderitem:</strong>
+  <%= @artwork.orderitem_id %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @artwork.artist_id %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @artwork.style_id %>
+</p>
+
+<p>
+  <strong>Artmedium:</strong>
+  <%= @artwork.artmedium_id %>
+</p>
+
+<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
+<%= link_to 'Back', artworks_path %>

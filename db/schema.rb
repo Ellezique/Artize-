@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_084037) do
+ActiveRecord::Schema.define(version: 2021_03_13_084516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,23 @@ ActiveRecord::Schema.define(version: 2021_03_13_084037) do
     t.string "artmedium_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "artworks", force: :cascade do |t|
+    t.string "art_title"
+    t.text "art_description"
+    t.decimal "art_price"
+    t.boolean "available"
+    t.bigint "orderitem_id", null: false
+    t.bigint "artist_id", null: false
+    t.bigint "style_id", null: false
+    t.bigint "artmedium_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_artworks_on_artist_id"
+    t.index ["artmedium_id"], name: "index_artworks_on_artmedium_id"
+    t.index ["orderitem_id"], name: "index_artworks_on_orderitem_id"
+    t.index ["style_id"], name: "index_artworks_on_style_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -116,6 +133,10 @@ ActiveRecord::Schema.define(version: 2021_03_13_084037) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "artists", "profiles"
+  add_foreign_key "artworks", "artists"
+  add_foreign_key "artworks", "artmedia"
+  add_foreign_key "artworks", "orderitems"
+  add_foreign_key "artworks", "styles"
   add_foreign_key "customers", "profiles"
   add_foreign_key "orderitems", "orders"
   add_foreign_key "orders", "customers"

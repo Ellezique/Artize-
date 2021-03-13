@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  art_title: MyString
+  art_description: MyText
+  art_price: 9.99
+  available: false
+  orderitem: one
+  artist: one
+  style: one
+  artmedium: one
+
+two:
+  art_title: MyString
+  art_description: MyText
+  art_price: 9.99
+  available: false
+  orderitem: two
+  artist: two
+  style: two
+  artmedium: two

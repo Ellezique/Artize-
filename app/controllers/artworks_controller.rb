@@ -1,9 +1,10 @@
 class ArtworksController < ApplicationController
   before_action :set_artwork, only: %i[ show edit update destroy ]
-   
+  before_action :read_artworks, only: [:index]
+  
   # GET /artworks or /artworks.json
   def index
-    @artworks = Artwork.all
+    #@artworks = Artwork.all
   end
 
   # GET /artworks/1 or /artworks/1.json
@@ -59,6 +60,9 @@ class ArtworksController < ApplicationController
   end
 
   private
+    def read_artworks
+      @artworks = Artwork.all
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_artwork
       @artwork = Artwork.find(params[:id])

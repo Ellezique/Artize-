@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :orderitems
+  resources :orders
+  resources :customers
   resources :profiles
   devise_for :users
   root to: "home#page"

@@ -7,4 +7,10 @@
     height: 100%;
     box-shadow: 5px 5px 8px #888888;
     border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.home_image:hover { 
+    transform: scale(0.98); 
+    filter: grayscale(50%);
 }

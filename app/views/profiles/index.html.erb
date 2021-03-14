@@ -5,6 +5,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Profile</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Street number</th>
@@ -14,6 +15,8 @@
       <th>Postcode</th>
       <th>Country</th>
       <th>User</th>
+      <th>Artist</th>
+      <th>Customer</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,6 +24,7 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
+        <td><%= profile.id %></td>
         <td><%= profile.first_name %></td>
         <td><%= profile.last_name %></td>
         <td><%= profile.street_number %></td>
@@ -30,6 +34,7 @@
         <td><%= profile.postcode %></td>
         <td><%= profile.country %></td>
         <td><%= profile.user_id %></td>
+        
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>

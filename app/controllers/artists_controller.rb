@@ -1,9 +1,10 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: %i[ show edit update destroy ]
-
+  before_action :read_artists, only: [:index]
+  before_action :set_artist, only: [:show]
   # GET /artists or /artists.json
   def index
-    @artists = Artist.all
+    # @artists = Artist.all   moved to privet read_index method below
   end
 
   # GET /artists/1 or /artists/1.json
@@ -22,6 +23,8 @@ class ArtistsController < ApplicationController
   # POST /artists or /artists.json
   def create
     @artist = Artist.new(artist_params)
+    @artist.profile_id = profile.user_id  #@profile.user_id = current_user.id
+   
 
     respond_to do |format|
       if @artist.save
@@ -47,6 +50,7 @@ class ArtistsController < ApplicationController
     end
   end
 
+
   # DELETE /artists/1 or /artists/1.json
   def destroy
     @artist.destroy
@@ -57,9 +61,15 @@ class ArtistsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    def read_artists
+      @artists = Artist.all
+    end
+  
+  # Use callbacks to share common setup or constraints between actions.
     def set_artist
-      @artist = Artist.find(params[:id])
+      if params[:id]
+        @artist = Artist.find(params[:id])
+      end
     end
 
     # Only allow a list of trusted parameters through.

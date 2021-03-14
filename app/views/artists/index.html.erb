@@ -1,18 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Artists</h1>
+<h1>About the Artists</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>About artist</th>
-      <th>Profile</th>
+      <th>ABOUT </th>
+      <th>PROFILE</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
+  <br>
   <tbody>
     <% @artists.each do |artist| %>
+      <th><%= artist.profile.last_name %></th>
       <tr>
         <td><%= artist.about_artist %></td>
         <td><%= artist.profile_id %></td>

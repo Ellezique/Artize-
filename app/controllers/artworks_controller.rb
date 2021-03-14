@@ -23,7 +23,7 @@ class ArtworksController < ApplicationController
   # POST /artworks or /artworks.json
   def create
     @artwork = Artwork.new(artwork_params)
-    #@artwork.artist_id =  @profile.user_id  not sure if this is correct but note that profiles controller we have  @profile.user_id = current_user.id
+    #@artwork.artist_id =  @profile.user_id  #note that profiles controller has  @profile.user_id = current_user.id
 
     respond_to do |format|
       if @artwork.save

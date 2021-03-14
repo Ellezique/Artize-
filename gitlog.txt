@@ -1,3 +1,123 @@
+commit 054ab07ef84e7ba4f6fb6075a9b93a7d0846b09f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 16:20:14 2021 +1000
+
+    Minor changes to button links
+
+commit 7660ed34e987f3caff81c374a547bc363e6284d3
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 15:58:28 2021 +1000
+
+    add links to buttons and navbar, add home page image hover transition
+
+commit 0884b7518a2ec488d31e673288cde4619ff6788b
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 14:56:00 2021 +1000
+
+    Add home page buttons and rename navbar sections, add rounded corners and shadow to home page image scss
+
+commit 217fac3bfcadef724c59f4c2992d0fdb4f2c0fc3
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 20:34:33 2021 +1000
+
+    added some routes and created a read_artworks before_action method
+
+commit 4c4c7e2d8412392e7c334dda063950938f43a3b8
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 20:09:54 2021 +1000
+
+    Arworks MVC changes to attach images using cloudinary Model and view but not yet controller - need to return to this.
+
+commit 0eb7cc2d4afa2dc51a2249fbb7eb644cb02ff5b2
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 19:06:50 2021 +1000
+
+    delete scaffold.scss again
+
+commit 94f17eeb4a1d58875e9c87292c9b57dea5c57fd7
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:53:08 2021 +1000
+
+    Generate Artworks scaffold, add associations, migrate database
+
+commit 00d6475932fd815caa3f8130eef0f0847d6de75f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:44:27 2021 +1000
+
+    Generate scaffolds for style and artmedium, migrate databases
+
+commit 738b137c9e6fdc085393ab209d3f9fd3f4c95f7c
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:34:27 2021 +1000
+
+    Generate scaffold style and migrate database
+
+commit 81ca6ebbf322af3aa143dc5a983ebce6687eb168
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:26:28 2021 +1000
+
+    Configure active storage to use cloudinary by updating storage.yml and environments development and production.rb files
+
+commit 7a2096e8b246d0fd357207a7cc8ca25e11246d4e
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:02:21 2021 +1000
+
+    migrate database after installing active storage
+
+commit 09de6bd02f2ece0ca3dc9c11e2b9c0b519bb8131
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:00:32 2021 +1000
+
+    Install active storage
+
+commit fa123eb3335705710bd7064e56970208218b6d31
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:48:34 2021 +1000
+
+    delete scaffold.scss file which was automatically created when generating scaffolds
+
+commit c43e89031ab806214b52cfc95d1fd987de37b168
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:35:08 2021 +1000
+
+    Generate Artist scaffold, add association, migrate database
+
+commit 0c4d368a733c81840196f24baa5f9cee4051e2fd
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:31:13 2021 +1000
+
+    Migrate database for Orderitems.Other migrations were done under prior commmit
+
+commit 8f15fcda3c69e731e66a88664157117eaa00e986
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:29:35 2021 +1000
+
+    Generate scaffolds for Customer, Order, Orderitem and add associations.
+
+commit a2514878f3f81b6505b59f12bbd9dd5437e3010f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Fri Mar 12 15:49:16 2021 +1000
+
+    add viewport meta tag to application.html.erb
+
+commit 65e279e8d2f58b99ef9d66c9c22019ec0ab467e5
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Fri Mar 12 15:07:29 2021 +1000
+
+    added profiles route
+
+commit 63c547f6a7c183df9af90776438924d626f96546
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 16:58:32 2021 +1000
+
+    Add table class to table in views> profiles>  index.html.erb
+
+commit 52d0f72f1516cd5f7d92629c22015c7f194062fd
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 16:27:13 2021 +1000
+
+    Add country select gem for simple form
+
 commit ae80b1189469ef38f1e46c46962a351767cb417e
 Author: Ellezique <gizellevanzyl@gmail.com>
 Date:   Thu Mar 11 15:36:57 2021 +1000

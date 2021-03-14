@@ -7,6 +7,13 @@
     <ul class="navbar-nav">
 
       <li class="nav-item active">
+        <% if !user_signed_in?%>
+          <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+          <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
+        <% end %>
+      </li>
+
+      <li class="nav-item active">
         <% if user_signed_in?%>
           <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
@@ -14,25 +21,20 @@
       </li>
 
       <li class="nav-item">
-        <% if user_signed_in? %>
           <!--<a class="nav-link" href="#">Create Profile</a> -->
            <%= link_to "Home", root_path, class: "nav-link"%>
-        <% end %>
       </li>  
-
+      
+      <li class="nav-item">
+           <%= link_to "Artworks", artworks_path, class: "nav-link"%>
+      </li>
+      
       <li class="nav-item">
         <% if user_signed_in? %>
           <!--<a class="nav-link" href="#">Create Profile</a> -->
            <%= link_to "Create profile", new_profile_path, class: "nav-link"%>
         <% end %>
-      </li>      
-
-      <li class="nav-item">
-        <% if user_signed_in? %>
-          <!--<a class="nav-link" href="#">Create Profile</a> -->
-           <%= link_to "Artworks", artworks_path, class: "nav-link"%>
-        <% end %>
-      </li> 
+      </li>       
     
       <li class="nav-item">
         <% if user_signed_in? %>

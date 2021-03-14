@@ -1,7 +1,7 @@
 class ArtworksController < ApplicationController
   before_action :set_artwork, only: %i[ show edit update destroy ]
   before_action :read_artworks, only: [:index]
-  
+  skip_before_action :authenticate_user!
   # GET /artworks or /artworks.json
   def index
     #@artworks = Artwork.all

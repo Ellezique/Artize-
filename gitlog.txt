@@ -1,3 +1,9 @@
+commit 40b0599d10f192d31e43578cc6f521f6e0a6c8ef
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 16:23:29 2021 +1000
+
+    prior commit also enables user to see art and home page without login by skipping before action authenticate user
+
 commit 054ab07ef84e7ba4f6fb6075a9b93a7d0846b09f
 Author: Ellezique <gizellevanzyl@gmail.com>
 Date:   Sun Mar 14 16:20:14 2021 +1000

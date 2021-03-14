@@ -12,7 +12,7 @@ class ArtworksController < ApplicationController
   end
 
   # GET /artworks/new
-  def new
+  def new  #allow if a user > profile > artist data entry has been created.
     @artwork = Artwork.new
   end
 
@@ -23,6 +23,7 @@ class ArtworksController < ApplicationController
   # POST /artworks or /artworks.json
   def create
     @artwork = Artwork.new(artwork_params)
+    #@artwork.artist_id =  @profile.user_id  not sure if this is correct but note that profiles controller we have  @profile.user_id = current_user.id
 
     respond_to do |format|
       if @artwork.save

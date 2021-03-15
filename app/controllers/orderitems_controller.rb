@@ -1,6 +1,7 @@
 class OrderitemsController < ApplicationController
   before_action :set_orderitem, only: %i[ show edit update destroy ]
 
+
   # GET /orderitems or /orderitems.json
   def index
     @orderitems = Orderitem.all

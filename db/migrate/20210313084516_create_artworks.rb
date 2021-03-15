@@ -6,7 +6,7 @@ class CreateArtworks < ActiveRecord::Migration[6.1]
       t.decimal :art_price
       t.boolean :available
       t.references :orderitem, null: false, foreign_key: true
-      t.references :artist, null: false, foreign_key: true
+      t.references :artist, index: true, foreign_key: true #non-unique index as multiple artworks can have the same artist
       t.references :style, null: false, foreign_key: true
       t.references :artmedium, null: false, foreign_key: true
 

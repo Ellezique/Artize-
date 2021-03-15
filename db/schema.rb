@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_084516) do
+ActiveRecord::Schema.define(version: 2021_03_15_123654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,13 +57,18 @@ ActiveRecord::Schema.define(version: 2021_03_13_084516) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "artmedia_artworks", id: false, force: :cascade do |t|
+    t.bigint "artmedium_id", null: false
+    t.bigint "artwork_id", null: false
+  end
+
   create_table "artworks", force: :cascade do |t|
     t.string "art_title"
     t.text "art_description"
     t.decimal "art_price"
     t.boolean "available"
     t.bigint "orderitem_id", null: false
-    t.bigint "artist_id", null: false
+    t.bigint "artist_id"
     t.bigint "style_id", null: false
     t.bigint "artmedium_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -72,6 +77,11 @@ ActiveRecord::Schema.define(version: 2021_03_13_084516) do
     t.index ["artmedium_id"], name: "index_artworks_on_artmedium_id"
     t.index ["orderitem_id"], name: "index_artworks_on_orderitem_id"
     t.index ["style_id"], name: "index_artworks_on_style_id"
+  end
+
+  create_table "artworks_styles", id: false, force: :cascade do |t|
+    t.bigint "artwork_id", null: false
+    t.bigint "style_id", null: false
   end
 
   create_table "customers", force: :cascade do |t|

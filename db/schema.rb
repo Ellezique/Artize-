@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_063401) do
+ActiveRecord::Schema.define(version: 2021_03_16_134052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,28 +52,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_063401) do
   end
 
   create_table "artmedia", force: :cascade do |t|
-    t.boolean "print"
-    t.boolean "digital"
-    t.boolean "sculpture"
-    t.boolean "painting"
-    t.boolean "drawing"
-    t.boolean "photography"
-    t.boolean "canvass"
-    t.boolean "paper"
-    t.boolean "mixed_media"
-    t.boolean "watercolor"
-    t.boolean "oil_paint"
-    t.boolean "acrylic_paint"
-    t.boolean "gouche_paint"
-    t.boolean "pencil"
-    t.boolean "ink"
-    t.boolean "metal"
-    t.boolean "stone"
-    t.boolean "etching"
-    t.boolean "lithograph"
-    t.boolean "glass"
-    t.boolean "clay"
-    t.boolean "ceramic"
+    t.string "artmedium_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -136,18 +115,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_063401) do
   end
 
   create_table "styles", force: :cascade do |t|
-    t.boolean "objective"
-    t.boolean "abstract"
-    t.boolean "subjective"
-    t.boolean "figurative"
-    t.boolean "geometric"
-    t.boolean "photorealism"
-    t.boolean "pop"
-    t.boolean "illustration"
-    t.boolean "still_life"
-    t.boolean "surrealism"
-    t.boolean "landscape"
-    t.boolean "portrait"
+    t.string "style_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

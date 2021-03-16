@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :artworks
-  resources :artmedia
   resources :styles
+  resources :artmedia
+  resources :artworks
   resources :artists
   resources :orders
   resources :customers

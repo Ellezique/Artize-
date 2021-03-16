@@ -5,4 +5,6 @@ class Artist < ApplicationRecord
   def artist_name
     return "#{profile.profile_name}"
   end
+
+
 end

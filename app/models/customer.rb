@@ -9,4 +9,6 @@ class Customer < ApplicationRecord
   def customer_address
     return "#{profile.street_number}, #{profile.street_name}, #{profile.suburb}, #{profile.postcode}, #{profile.country}"
   end
+
+
 end

@@ -17,7 +17,7 @@ class ArtmediaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create artmedium" do
     assert_difference('Artmedium.count') do
-      post artmedia_url, params: { artmedium: { artmedium_description: @artmedium.artmedium_description } }
+      post artmedia_url, params: { artmedium: { acrylic_paint: @artmedium.acrylic_paint, canvass: @artmedium.canvass, ceramic: @artmedium.ceramic, clay: @artmedium.clay, digital: @artmedium.digital, drawing: @artmedium.drawing, etching: @artmedium.etching, glass: @artmedium.glass, gouche_paint: @artmedium.gouche_paint, ink: @artmedium.ink, lithograph: @artmedium.lithograph, metal: @artmedium.metal, mixed_media: @artmedium.mixed_media, oil_paint: @artmedium.oil_paint, painting: @artmedium.painting, paper: @artmedium.paper, pencil: @artmedium.pencil, photography: @artmedium.photography, print: @artmedium.print, sculpture: @artmedium.sculpture, stone: @artmedium.stone, watercolor: @artmedium.watercolor } }
     end
 
     assert_redirected_to artmedium_url(Artmedium.last)
@@ -34,7 +34,7 @@ class ArtmediaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update artmedium" do
-    patch artmedium_url(@artmedium), params: { artmedium: { artmedium_description: @artmedium.artmedium_description } }
+    patch artmedium_url(@artmedium), params: { artmedium: { acrylic_paint: @artmedium.acrylic_paint, canvass: @artmedium.canvass, ceramic: @artmedium.ceramic, clay: @artmedium.clay, digital: @artmedium.digital, drawing: @artmedium.drawing, etching: @artmedium.etching, glass: @artmedium.glass, gouche_paint: @artmedium.gouche_paint, ink: @artmedium.ink, lithograph: @artmedium.lithograph, metal: @artmedium.metal, mixed_media: @artmedium.mixed_media, oil_paint: @artmedium.oil_paint, painting: @artmedium.painting, paper: @artmedium.paper, pencil: @artmedium.pencil, photography: @artmedium.photography, print: @artmedium.print, sculpture: @artmedium.sculpture, stone: @artmedium.stone, watercolor: @artmedium.watercolor } }
     assert_redirected_to artmedium_url(@artmedium)
   end
 

@@ -18,10 +18,7 @@ class ArtworksTest < ApplicationSystemTestCase
     fill_in "Art price", with: @artwork.art_price
     fill_in "Art title", with: @artwork.art_title
     fill_in "Artist", with: @artwork.artist_id
-    fill_in "Artmedium", with: @artwork.artmedium_id
     check "Available" if @artwork.available
-    fill_in "Orderitem", with: @artwork.orderitem_id
-    fill_in "Style", with: @artwork.style_id
     click_on "Create Artwork"
 
     assert_text "Artwork was successfully created"
@@ -36,10 +33,7 @@ class ArtworksTest < ApplicationSystemTestCase
     fill_in "Art price", with: @artwork.art_price
     fill_in "Art title", with: @artwork.art_title
     fill_in "Artist", with: @artwork.artist_id
-    fill_in "Artmedium", with: @artwork.artmedium_id
     check "Available" if @artwork.available
-    fill_in "Orderitem", with: @artwork.orderitem_id
-    fill_in "Style", with: @artwork.style_id
     click_on "Update Artwork"
 
     assert_text "Artwork was successfully updated"

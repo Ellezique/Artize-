@@ -64,6 +64,6 @@ class StylesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def style_params
-      params.require(:style).permit(:style_description)
+      params.require(:style).permit(:objective, :abstract, :subjective, :figurative, :geometric, :photorealism, :pop, :illustration, :still_life, :surrealism, :landscape, :portrait)
     end
 end

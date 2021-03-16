@@ -5,7 +5,28 @@
 <table>
   <thead>
     <tr>
-      <th>Artmedium description</th>
+      <th>Print</th>
+      <th>Digital</th>
+      <th>Sculpture</th>
+      <th>Painting</th>
+      <th>Drawing</th>
+      <th>Photography</th>
+      <th>Canvass</th>
+      <th>Paper</th>
+      <th>Mixed media</th>
+      <th>Watercolor</th>
+      <th>Oil paint</th>
+      <th>Acrylic paint</th>
+      <th>Gouche paint</th>
+      <th>Pencil</th>
+      <th>Ink</th>
+      <th>Metal</th>
+      <th>Stone</th>
+      <th>Etching</th>
+      <th>Lithograph</th>
+      <th>Glass</th>
+      <th>Clay</th>
+      <th>Ceramic</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +34,28 @@
   <tbody>
     <% @artmedia.each do |artmedium| %>
       <tr>
-        <td><%= artmedium.artmedium_description %></td>
+        <td><%= artmedium.print %></td>
+        <td><%= artmedium.digital %></td>
+        <td><%= artmedium.sculpture %></td>
+        <td><%= artmedium.painting %></td>
+        <td><%= artmedium.drawing %></td>
+        <td><%= artmedium.photography %></td>
+        <td><%= artmedium.canvass %></td>
+        <td><%= artmedium.paper %></td>
+        <td><%= artmedium.mixed_media %></td>
+        <td><%= artmedium.watercolor %></td>
+        <td><%= artmedium.oil_paint %></td>
+        <td><%= artmedium.acrylic_paint %></td>
+        <td><%= artmedium.gouche_paint %></td>
+        <td><%= artmedium.pencil %></td>
+        <td><%= artmedium.ink %></td>
+        <td><%= artmedium.metal %></td>
+        <td><%= artmedium.stone %></td>
+        <td><%= artmedium.etching %></td>
+        <td><%= artmedium.lithograph %></td>
+        <td><%= artmedium.glass %></td>
+        <td><%= artmedium.clay %></td>
+        <td><%= artmedium.ceramic %></td>
         <td><%= link_to 'Show', artmedium %></td>
         <td><%= link_to 'Edit', edit_artmedium_path(artmedium) %></td>
         <td><%= link_to 'Destroy', artmedium, method: :delete, data: { confirm: 'Are you sure?' } %></td>

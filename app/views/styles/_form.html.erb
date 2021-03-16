@@ -4,7 +4,18 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :style_description %>
+    <%= f.input :objective %>
+    <%= f.input :abstract %>
+    <%= f.input :subjective %>
+    <%= f.input :figurative %>
+    <%= f.input :geometric %>
+    <%= f.input :photorealism %>
+    <%= f.input :pop %>
+    <%= f.input :illustration %>
+    <%= f.input :still_life %>
+    <%= f.input :surrealism %>
+    <%= f.input :landscape %>
+    <%= f.input :portrait %>
   </div>
 
   <div class="form-actions">

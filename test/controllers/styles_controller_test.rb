@@ -17,7 +17,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create style" do
     assert_difference('Style.count') do
-      post styles_url, params: { style: { style_description: @style.style_description } }
+      post styles_url, params: { style: { abstract: @style.abstract, figurative: @style.figurative, geometric: @style.geometric, illustration: @style.illustration, landscape: @style.landscape, objective: @style.objective, photorealism: @style.photorealism, pop: @style.pop, portrait: @style.portrait, still_life: @style.still_life, subjective: @style.subjective, surrealism: @style.surrealism } }
     end
 
     assert_redirected_to style_url(Style.last)
@@ -34,7 +34,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update style" do
-    patch style_url(@style), params: { style: { style_description: @style.style_description } }
+    patch style_url(@style), params: { style: { abstract: @style.abstract, figurative: @style.figurative, geometric: @style.geometric, illustration: @style.illustration, landscape: @style.landscape, objective: @style.objective, photorealism: @style.photorealism, pop: @style.pop, portrait: @style.portrait, still_life: @style.still_life, subjective: @style.subjective, surrealism: @style.surrealism } }
     assert_redirected_to style_url(@style)
   end
 

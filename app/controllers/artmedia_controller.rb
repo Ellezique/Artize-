@@ -64,6 +64,6 @@ class ArtmediaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artmedium_params
-      params.require(:artmedium).permit(:artmedium_description)
+      params.require(:artmedium).permit(:print, :digital, :sculpture, :painting, :drawing, :photography, :canvass, :paper, :mixed_media, :watercolor, :oil_paint, :acrylic_paint, :gouche_paint, :pencil, :ink, :metal, :stone, :etching, :lithograph, :glass, :clay, :ceramic)
     end
 end

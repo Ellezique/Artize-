@@ -1,7 +1,49 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  artmedium_description: MyString
+  print: false
+  digital: false
+  sculpture: false
+  painting: false
+  drawing: false
+  photography: false
+  canvass: false
+  paper: false
+  mixed_media: false
+  watercolor: false
+  oil_paint: false
+  acrylic_paint: false
+  gouche_paint: false
+  pencil: false
+  ink: false
+  metal: false
+  stone: false
+  etching: false
+  lithograph: false
+  glass: false
+  clay: false
+  ceramic: false
 
 two:
-  artmedium_description: MyString
+  print: false
+  digital: false
+  sculpture: false
+  painting: false
+  drawing: false
+  photography: false
+  canvass: false
+  paper: false
+  mixed_media: false
+  watercolor: false
+  oil_paint: false
+  acrylic_paint: false
+  gouche_paint: false
+  pencil: false
+  ink: false
+  metal: false
+  stone: false
+  etching: false
+  lithograph: false
+  glass: false
+  clay: false
+  ceramic: false

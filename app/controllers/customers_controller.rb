@@ -23,6 +23,10 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
 
+      #set artist to current user via profiles table. 
+      #@profile.user_id = current_user.id
+      #@artist.profile_id = profile.user_id  
+
     respond_to do |format|
       if @customer.save
         format.html { redirect_to @customer, notice: "Customer was successfully created." }

@@ -23,8 +23,11 @@ class ArtistsController < ApplicationController
   # POST /artists or /artists.json
   def create
     @artist = Artist.new(artist_params)
-    @artist.profile_id = profile.user_id  #@profile.user_id = current_user.id
-   
+
+    #set artist to current user via profiles table. 
+    @profile.user_id = current_user.id
+    @artist.profile_id = profile.user_id  
+    
 
     respond_to do |format|
       if @artist.save
@@ -53,7 +56,7 @@ class ArtistsController < ApplicationController
 
   # DELETE /artists/1 or /artists/1.json
   def destroy
-    @artist.destroy
+    @artist.destroy    #will destroy all of their artwork as well, due to table associations
     respond_to do |format|
       format.html { redirect_to artists_url, notice: "Artist was successfully destroyed." }
       format.json { head :no_content }

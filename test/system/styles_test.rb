@@ -14,7 +14,18 @@ class StylesTest < ApplicationSystemTestCase
     visit styles_url
     click_on "New Style"
 
-    fill_in "Style description", with: @style.style_description
+    check "Abstract" if @style.abstract
+    check "Figurative" if @style.figurative
+    check "Geometric" if @style.geometric
+    check "Illustration" if @style.illustration
+    check "Landscape" if @style.landscape
+    check "Objective" if @style.objective
+    check "Photorealism" if @style.photorealism
+    check "Pop" if @style.pop
+    check "Portrait" if @style.portrait
+    check "Still life" if @style.still_life
+    check "Subjective" if @style.subjective
+    check "Surrealism" if @style.surrealism
     click_on "Create Style"
 
     assert_text "Style was successfully created"
@@ -25,7 +36,18 @@ class StylesTest < ApplicationSystemTestCase
     visit styles_url
     click_on "Edit", match: :first
 
-    fill_in "Style description", with: @style.style_description
+    check "Abstract" if @style.abstract
+    check "Figurative" if @style.figurative
+    check "Geometric" if @style.geometric
+    check "Illustration" if @style.illustration
+    check "Landscape" if @style.landscape
+    check "Objective" if @style.objective
+    check "Photorealism" if @style.photorealism
+    check "Pop" if @style.pop
+    check "Portrait" if @style.portrait
+    check "Still life" if @style.still_life
+    check "Subjective" if @style.subjective
+    check "Surrealism" if @style.surrealism
     click_on "Update Style"
 
     assert_text "Style was successfully updated"

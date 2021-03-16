@@ -17,7 +17,7 @@ class ArtworksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create artwork" do
     assert_difference('Artwork.count') do
-      post artworks_url, params: { artwork: { art_description: @artwork.art_description, art_price: @artwork.art_price, art_title: @artwork.art_title, artist_id: @artwork.artist_id, artmedium_id: @artwork.artmedium_id, available: @artwork.available, orderitem_id: @artwork.orderitem_id, style_id: @artwork.style_id } }
+      post artworks_url, params: { artwork: { art_description: @artwork.art_description, art_price: @artwork.art_price, art_title: @artwork.art_title, artist_id: @artwork.artist_id, available: @artwork.available } }
     end
 
     assert_redirected_to artwork_url(Artwork.last)
@@ -34,7 +34,7 @@ class ArtworksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update artwork" do
-    patch artwork_url(@artwork), params: { artwork: { art_description: @artwork.art_description, art_price: @artwork.art_price, art_title: @artwork.art_title, artist_id: @artwork.artist_id, artmedium_id: @artwork.artmedium_id, available: @artwork.available, orderitem_id: @artwork.orderitem_id, style_id: @artwork.style_id } }
+    patch artwork_url(@artwork), params: { artwork: { art_description: @artwork.art_description, art_price: @artwork.art_price, art_title: @artwork.art_title, artist_id: @artwork.artist_id, available: @artwork.available } }
     assert_redirected_to artwork_url(@artwork)
   end
 

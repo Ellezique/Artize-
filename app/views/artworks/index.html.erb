@@ -9,10 +9,7 @@
       <th>Art description</th>
       <th>Art price</th>
       <th>Available</th>
-      <th>Orderitem</th>
       <th>Artist</th>
-      <th>Style</th>
-      <th>Artmedium</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,10 +21,7 @@
         <td><%= artwork.art_description %></td>
         <td><%= artwork.art_price %></td>
         <td><%= artwork.available %></td>
-        <td><%= artwork.orderitem_id %></td>
         <td><%= artwork.artist_id %></td>
-        <td><%= artwork.style_id %></td>
-        <td><%= artwork.artmedium_id %></td>
         <td><%= link_to 'Show', artwork %></td>
         <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
         <td><%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,7 +32,4 @@
 
 <br>
 
-<%= link_to "Add Art", new_artwork_path, class:"btn btn-primary btn-lg"%>
-<%= link_to "Add Medium", new_artmedium_path, class:"btn btn-primary btn-lg"%>
-<%= link_to "Add Style", new_style_path, class:"btn btn-primary btn-lg"%>
-
+<%= link_to 'New Artwork', new_artwork_path %>

@@ -22,7 +22,7 @@
 
 <p>
   <strong>Artist:</strong>
-  <%= @artwork.artist_id %>
+  <%= @artwork.artist.profile.profile_name %>
 </p>
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |

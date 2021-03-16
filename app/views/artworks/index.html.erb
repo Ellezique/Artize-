@@ -2,7 +2,7 @@
 
 <h1>Artworks</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Art title</th>
@@ -17,11 +17,11 @@
   <tbody>
     <% @artworks.each do |artwork| %>
       <tr>
-        <td><%= artwork.art_title %></td>
+        <td><%= link_to artwork.art_title, artwork_path(artwork.id) %></td>
         <td><%= artwork.art_description %></td>
         <td><%= artwork.art_price %></td>
         <td><%= artwork.available %></td>
-        <td><%= artwork.artist_id %></td>
+        <td><%= artwork.artist.profile.profile_name %></td>
         <td><%= link_to 'Show', artwork %></td>
         <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
         <td><%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: %i[ show edit update destroy ]
   before_action :read_artists, only: [:index]
-  before_action :set_artist, only: [:show]
+
   # GET /artists or /artists.json
   def index
     # @artists = Artist.all   moved to privet read_index method below
@@ -22,13 +22,10 @@ class ArtistsController < ApplicationController
 
   # POST /artists or /artists.json
   def create
-    @artist = Artist.new(artist_params)
-
     #set artist to current user via profiles table. 
-    @profile.user_id = current_user.id
-    @artist.profile_id = profile.user_id  
-    
+   #@artist.profile.user_id = current_user.id  
 
+    @artist = Artist.new(artist_params)
     respond_to do |format|
       if @artist.save
         format.html { redirect_to @artist, notice: "Artist was successfully created." }
@@ -77,6 +74,6 @@ class ArtistsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artist_params
-      params.require(:artist).permit(:about_artist, :profile_id)
+      params.require(:artist).permit(:about_artist, :profile_id, :artist_name)
     end
 end

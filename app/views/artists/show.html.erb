@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @artist.profile.last_name%></h1>
-
+<h1><%= @artwork.artist.profile.profile_name %></h1>
 <p>
   <strong>About artist:</strong>
   <%= @artist.about_artist %>
@@ -11,6 +10,11 @@
   <strong>Profile:</strong>
   <%= @artist.profile_id %>
 </p>
+
+<h2>Artworks: </h2>
+<%= @artwork.artist.each do |artwork|%>
+  <%=link_to artwork.art_title, artwork_path(artwork.id)%>
+<% end %>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

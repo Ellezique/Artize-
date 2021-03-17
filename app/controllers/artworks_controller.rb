@@ -23,7 +23,7 @@ class ArtworksController < ApplicationController
   # POST /artworks or /artworks.json
   def create
     @artwork = Artwork.new(artwork_params)
-
+    #@artwork.artist_id = current_user.id  how do I set this up
     respond_to do |format|
       if @artwork.save
         format.html { redirect_to @artwork, notice: "Artwork was successfully created." }

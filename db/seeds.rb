@@ -9,8 +9,8 @@
 #clean up
 Style.destroy_all
 Artmedium.destroy_all
-#Artwork.destroy_all
-#Artist.destroy_all
+#Artwork.destroy_all    depends on artist
+#Artist.destroy_all     depends on user>profile
 
 objective = Style.create(style_description: "Objective")
 abstract = Style.create(style_description: "Abstract")

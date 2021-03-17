@@ -25,5 +25,14 @@
   <%= @artwork.artist.profile.profile_name %>
 </p>
 
+<p>
+  <strong>Styles:</strong>
+  <%= @artwork.list_styles %>
+</p>
+
+<p>
+  <strong>Media:</strong>
+  <%= @artwork.list_artmedia %>
+</p>
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>

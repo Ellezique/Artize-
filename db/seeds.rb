@@ -17,9 +17,9 @@ Artmedium.destroy_all
 #Artist.destroy_all     #depends on user>profile
 
 #ARTISTS
-test = Artist.create(about_artist: "Test is a test artist.", profile_id: 1)
-leon = Artist.create(about_artist: "Leon Devenice is an award-winning [...] artist painter whose unique work portrays nature’s majestic beauty. His art often depicts the glorious richness of alfresco living and is lauded for its sense of romance and passion. Unafraid to incorporate bold colors, Leon speaks the language of vitality and sensuality with his incredible landscapes and painted scenes.", profile_id: 3)
-gizelle = Artist.create(about_artist: "Gizelle v.Z is a mysterious artist who works with various media.", profile_id: 4)
+#testtest = Artist.create(about_artist: "Test is a test artist.", profile_id: 1)
+#leon = Artist.create(about_artist: "Leon Devenice is an award-winning [...] artist painter whose unique work portrays nature’s majestic beauty. His art often depicts the glorious richness of alfresco living and is lauded for its sense of romance and passion. Unafraid to incorporate bold colors, Leon speaks the language of vitality and sensuality with his incredible landscapes and painted scenes.", profile_id: )
+#gizelle = Artist.create(about_artist: "Gizelle v.Z is a mysterious artist who works with various media.", profile_id: )
 
 #STYLE AND MEDIA
 objective = Style.create(style_description: "Objective")
@@ -59,5 +59,5 @@ clay = Artmedium.create(artmedium_description: "Clay")
 ceramic = Artmedium.create(artmedium_description: "Ceramic")
 
 #ARTWORKS
-leon.artworks.create(art_title: "Still life with Fruits & Wine", art_description: "Oil painting on canvas", art_price: 750, available: true, styles: landscape, media: [painting, oil_paint]) 
-gizelle.artworks.create(art_title: "Weathered Boat", art_description: "Black and White photograph of a weather damaged boat.", art_price: 250, available: true, styles: black_and_white, media: photograph)
+#leon.artworks.create(art_title: "Still life with Fruits & Wine", art_description: "Oil painting on canvas", art_price: 750, available: true, styles: landscape, media: [painting, oil_paint]) 
+#gizelle.artworks.create(art_title: "Weathered Boat", art_description: "Black and White photograph of a weather damaged boat.", art_price: 250, available: true, styles: black_and_white, media: photograph)

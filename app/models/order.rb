@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :customer
-  has_and_belongs_to_many :artworks
+  has_many :artworks_orders
+  has_many :artworks, through: :artworks_order
 end
 
     

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_134052) do
+ActiveRecord::Schema.define(version: 2021_03_17_065630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,11 +57,6 @@ ActiveRecord::Schema.define(version: 2021_03_16_134052) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "artmedia_artworks", id: false, force: :cascade do |t|
-    t.bigint "artmedium_id", null: false
-    t.bigint "artwork_id", null: false
-  end
-
   create_table "artworks", force: :cascade do |t|
     t.string "art_title"
     t.text "art_description"
@@ -73,14 +68,31 @@ ActiveRecord::Schema.define(version: 2021_03_16_134052) do
     t.index ["artist_id"], name: "index_artworks_on_artist_id"
   end
 
-  create_table "artworks_orders", id: false, force: :cascade do |t|
+  create_table "artworks_artmedia", force: :cascade do |t|
     t.bigint "artwork_id", null: false
-    t.bigint "order_id", null: false
+    t.bigint "artmedium_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artmedium_id"], name: "index_artworks_artmedia_on_artmedium_id"
+    t.index ["artwork_id"], name: "index_artworks_artmedia_on_artwork_id"
   end
 
-  create_table "artworks_styles", id: false, force: :cascade do |t|
+  create_table "artworks_orders", force: :cascade do |t|
+    t.bigint "artwork_id", null: false
+    t.bigint "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artwork_id"], name: "index_artworks_orders_on_artwork_id"
+    t.index ["order_id"], name: "index_artworks_orders_on_order_id"
+  end
+
+  create_table "artworks_styles", force: :cascade do |t|
     t.bigint "artwork_id", null: false
     t.bigint "style_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artwork_id"], name: "index_artworks_styles_on_artwork_id"
+    t.index ["style_id"], name: "index_artworks_styles_on_style_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -136,6 +148,12 @@ ActiveRecord::Schema.define(version: 2021_03_16_134052) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "artists", "profiles"
   add_foreign_key "artworks", "artists"
+  add_foreign_key "artworks_artmedia", "artmedia"
+  add_foreign_key "artworks_artmedia", "artworks"
+  add_foreign_key "artworks_orders", "artworks"
+  add_foreign_key "artworks_orders", "orders"
+  add_foreign_key "artworks_styles", "artworks"
+  add_foreign_key "artworks_styles", "styles"
   add_foreign_key "customers", "profiles"
   add_foreign_key "orders", "customers"
   add_foreign_key "profiles", "users"

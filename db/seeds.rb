@@ -7,10 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #clean up
+ArtworksArtmedium.destroy_all
+ArtworksOrder.destroy_all
+ArtworksStyle.destroy_all
 Style.destroy_all
 Artmedium.destroy_all
-#Artwork.destroy_all    depends on artist
-#Artist.destroy_all     depends on user>profile
+Order.destroy_all
+#Artwork.destroy_all    #depends on artist
+#Artist.destroy_all     #depends on user>profile
+
+#gizelle = Artist.create(about_artist: "Gizelle v.Z is a mysterious artist who works with various media.")
+#gizelle.artworks.create(art_title: "Weathered Boat", art_description: "Black and White photograph of a weather damaged boat.", art_price: 250, available: true, artist_id:1)
+
+#leon = Artist.create(about_artist: "Leon Devenice is an award-winning [...] artist painter whose unique work portrays nature’s majestic beauty. His art often depicts the glorious richness of alfresco living and is lauded for its sense of romance and passion. Unafraid to incorporate bold colors, Leon speaks the language of vitality and sensuality with his incredible landscapes and painted scenes. Official website: https://leondevenice.com/")
+#leon.artworks.create(art_title: "Still life with Fruits & Wine", art_description: "Oil painting on canvas", art_price: 750, available: true, artist_id:2) 
 
 objective = Style.create(style_description: "Objective")
 abstract = Style.create(style_description: "Abstract")

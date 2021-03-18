@@ -21,7 +21,6 @@
       </li>
 
       <li class="nav-item">
-          <!--<a class="nav-link" href="#">Create Profile</a> -->
            <%= link_to "Home", root_path, class: "nav-link"%>
       </li>  
       
@@ -31,18 +30,21 @@
       
       <li class="nav-item">
         <% if user_signed_in? %>
-          <!--<a class="nav-link" href="#">Create Profile</a> -->
-           <%= link_to "Create profile", new_profile_path, class: "nav-link"%>
-        <% end %>
-      </li>       
-    
-      <li class="nav-item">
-        <% if user_signed_in? %>
-          <!--<a class="nav-link" href="#">Create Profile</a> -->
            <%= link_to "Artists", artists_path, class: "nav-link"%>
         <% end %>
       </li> 
     
+      <li class="nav-item">
+        <% if user_signed_in? %>
+           <%= link_to "Add Artist", new_artist_path, class: "nav-link"%>
+        <% end %>
+      </li> 
+
+      <li class="nav-item">
+        <% if user_signed_in? %>
+           <%= link_to "Add Artwork", new_artwork_path, class: "nav-link"%>
+        <% end %>
+      </li> 
       
       <li class="nav-item">
         <a class="nav-link" href="#">Checkout</a>

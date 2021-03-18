@@ -2,6 +2,8 @@ class ArtistsController < ApplicationController
   #before_action :set_artist, only: %i[ show edit update destroy ]
   before_action :read_artist, only: [:index]
   before_action :set_artist, only: [:show]
+  
+  
 
   # GET /artists or /artists.json
   def index

@@ -15,5 +15,12 @@
   <%= @artist.about_artist %>
 </p>
 
+<p>
+  <strong>Artworks:</strong>
+  <% @artist.artworks.each do |artwork| %>
+    <p><%=link_to artwork.art_title, artwork_path(artwork.id) %></p>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

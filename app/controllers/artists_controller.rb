@@ -1,11 +1,9 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: %i[ show edit update destroy ]
-  before_action :read_artists, only: [:index]
 
-  
   # GET /artists or /artists.json
   def index
-    # @artists = Artist.all   moved to privet read_index method below
+    @artists = Artist.all
   end
 
   # GET /artists/1 or /artists/1.json
@@ -23,9 +21,8 @@ class ArtistsController < ApplicationController
 
   # POST /artists or /artists.json
   def create
-    #set artist to current user via profiles table.  #@artist.profile.user_id = current_user.id  
-    
     @artist = Artist.new(artist_params)
+
     respond_to do |format|
       if @artist.save
         format.html { redirect_to @artist, notice: "Artist was successfully created." }
@@ -50,10 +47,9 @@ class ArtistsController < ApplicationController
     end
   end
 
-
   # DELETE /artists/1 or /artists/1.json
   def destroy
-    @artist.destroy    #will destroy all of their artwork as well, due to table associations
+    @artist.destroy
     respond_to do |format|
       format.html { redirect_to artists_url, notice: "Artist was successfully destroyed." }
       format.json { head :no_content }
@@ -61,20 +57,13 @@ class ArtistsController < ApplicationController
   end
 
   private
-    def read_artists
-      @artists = Artist.all
-    end
-  
-  # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to share common setup or constraints between actions.
     def set_artist
-      if params[:id]
-        @artist = Artist.find(params[:id])
-      end
+      @artist = Artist.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def artist_params
-      params.require(:artist).permit(:about_artist, :profile_id)
-      # params.require(:artist).permit(:about_artist, :profile_id, :artist_name)
+      params.require(:artist).permit(:artist_first_name, :artist_last_name, :about_artist)
     end
 end

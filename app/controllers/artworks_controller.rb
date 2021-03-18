@@ -4,7 +4,6 @@ class ArtworksController < ApplicationController
   # GET /artworks or /artworks.json
   def index
     @artworks = Artwork.all
-  
   end
 
   # GET /artworks/1 or /artworks/1.json
@@ -23,7 +22,7 @@ class ArtworksController < ApplicationController
   # POST /artworks or /artworks.json
   def create
     @artwork = Artwork.new(artwork_params)
-    #@artwork.artist_id = current_user.id  how do I set this up
+
     respond_to do |format|
       if @artwork.save
         format.html { redirect_to @artwork, notice: "Artwork was successfully created." }
@@ -65,6 +64,6 @@ class ArtworksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artwork_params
-      params.require(:artwork).permit(:art_title, :art_description, :art_price, :available, :artist_id)
+      params.require(:artwork).permit(:art_title, :art_description, :available, :artist_id)
     end
 end

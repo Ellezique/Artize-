@@ -3,13 +3,11 @@
 one:
   art_title: MyString
   art_description: MyText
-  art_price: 9.99
   available: false
   artist: one
 
 two:
   art_title: MyString
   art_description: MyText
-  art_price: 9.99
   available: false
   artist: two

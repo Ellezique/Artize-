@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>About the Artists</h1>
-o
-<table class="table">
+<h1>Artists</h1>
+
+<table>
   <thead>
     <tr>
-      <th>ARTIST </th>
-      <th>ABOUT </th>
-      <th>PROFILE</th>
+      <th>Artist first name</th>
+      <th>Artist last name</th>
+      <th>About artist</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-  <br>
+
   <tbody>
     <% @artists.each do |artist| %>
       <tr>
-        <td><%= artist.artist_name %></td>
+        <td><%= artist.artist_first_name %></td>
+        <td><%= artist.artist_last_name %></td>
         <td><%= artist.about_artist %></td>
-        <td><%= artist.profile_id %></td>
         <td><%= link_to 'Show', artist %></td>
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
         <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,5 +28,4 @@ o
 
 <br>
 
-
-<%= link_to "Add Artist", new_artist_path, class:"btn btn-primary btn-lg"%>
+<%= link_to 'New Artist', new_artist_path %>

@@ -1,15 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @artist.profile.profile_name%></h1>
-
 <p>
-  <strong>About: </strong>
-  <%= @artist.about_artist %>
+  <strong>Artist first name:</strong>
+  <%= @artist.artist_first_name %>
 </p>
 
 <p>
-  <strong>Profile:</strong>
-  <%= @artist.profile_id %>
+  <strong>Artist last name:</strong>
+  <%= @artist.artist_last_name %>
+</p>
+
+<p>
+  <strong>About artist:</strong>
+  <%= @artist.about_artist %>
 </p>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |

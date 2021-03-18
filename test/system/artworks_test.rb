@@ -15,7 +15,6 @@ class ArtworksTest < ApplicationSystemTestCase
     click_on "New Artwork"
 
     fill_in "Art description", with: @artwork.art_description
-    fill_in "Art price", with: @artwork.art_price
     fill_in "Art title", with: @artwork.art_title
     fill_in "Artist", with: @artwork.artist_id
     check "Available" if @artwork.available
@@ -30,7 +29,6 @@ class ArtworksTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Art description", with: @artwork.art_description
-    fill_in "Art price", with: @artwork.art_price
     fill_in "Art title", with: @artwork.art_title
     fill_in "Artist", with: @artwork.artist_id
     check "Available" if @artwork.available

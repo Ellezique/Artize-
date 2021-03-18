@@ -10,127 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_17_065630) do
+ActiveRecord::Schema.define(version: 2021_03_11_033700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "active_storage_attachments", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
-    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
-    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
-  end
-
-  create_table "active_storage_blobs", force: :cascade do |t|
-    t.string "key", null: false
-    t.string "filename", null: false
-    t.string "content_type"
-    t.text "metadata"
-    t.string "service_name", null: false
-    t.bigint "byte_size", null: false
-    t.string "checksum", null: false
-    t.datetime "created_at", null: false
-    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
-  end
-
-  create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
-    t.string "variation_digest", null: false
-    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-  end
-
-  create_table "artists", force: :cascade do |t|
-    t.text "about_artist"
-    t.bigint "profile_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["profile_id"], name: "index_artists_on_profile_id"
-  end
-
-  create_table "artmedia", force: :cascade do |t|
-    t.string "artmedium_description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "artworks", force: :cascade do |t|
-    t.string "art_title"
-    t.text "art_description"
-    t.decimal "art_price"
-    t.boolean "available"
-    t.bigint "artist_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["artist_id"], name: "index_artworks_on_artist_id"
-  end
-
-  create_table "artworks_artmedia", force: :cascade do |t|
-    t.bigint "artwork_id", null: false
-    t.bigint "artmedium_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["artmedium_id"], name: "index_artworks_artmedia_on_artmedium_id"
-    t.index ["artwork_id"], name: "index_artworks_artmedia_on_artwork_id"
-  end
-
-  create_table "artworks_orders", force: :cascade do |t|
-    t.bigint "artwork_id", null: false
-    t.bigint "order_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["artwork_id"], name: "index_artworks_orders_on_artwork_id"
-    t.index ["order_id"], name: "index_artworks_orders_on_order_id"
-  end
-
-  create_table "artworks_styles", force: :cascade do |t|
-    t.bigint "artwork_id", null: false
-    t.bigint "style_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["artwork_id"], name: "index_artworks_styles_on_artwork_id"
-    t.index ["style_id"], name: "index_artworks_styles_on_style_id"
-  end
-
-  create_table "customers", force: :cascade do |t|
-    t.bigint "profile_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["profile_id"], name: "index_customers_on_profile_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.date "order_date"
-    t.decimal "order_price"
-    t.bigint "customer_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["customer_id"], name: "index_orders_on_customer_id"
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "street_number"
-    t.string "street_name"
-    t.string "suburb"
-    t.string "state"
-    t.integer "postcode"
-    t.string "country"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_profiles_on_user_id"
-  end
-
-  create_table "styles", force: :cascade do |t|
-    t.string "style_description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -144,17 +27,4 @@ ActiveRecord::Schema.define(version: 2021_03_17_065630) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "artists", "profiles"
-  add_foreign_key "artworks", "artists"
-  add_foreign_key "artworks_artmedia", "artmedia"
-  add_foreign_key "artworks_artmedia", "artworks"
-  add_foreign_key "artworks_orders", "artworks"
-  add_foreign_key "artworks_orders", "orders"
-  add_foreign_key "artworks_styles", "artworks"
-  add_foreign_key "artworks_styles", "styles"
-  add_foreign_key "customers", "profiles"
-  add_foreign_key "orders", "customers"
-  add_foreign_key "profiles", "users"
 end

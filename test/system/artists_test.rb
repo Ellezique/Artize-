@@ -15,7 +15,8 @@ class ArtistsTest < ApplicationSystemTestCase
     click_on "New Artist"
 
     fill_in "About artist", with: @artist.about_artist
-    fill_in "Profile", with: @artist.profile_id
+    fill_in "Artist first name", with: @artist.artist_first_name
+    fill_in "Artist last name", with: @artist.artist_last_name
     click_on "Create Artist"
 
     assert_text "Artist was successfully created"
@@ -27,7 +28,8 @@ class ArtistsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "About artist", with: @artist.about_artist
-    fill_in "Profile", with: @artist.profile_id
+    fill_in "Artist first name", with: @artist.artist_first_name
+    fill_in "Artist last name", with: @artist.artist_last_name
     click_on "Update Artist"
 
     assert_text "Artist was successfully updated"

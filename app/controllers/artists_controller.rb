@@ -1,9 +1,11 @@
 class ArtistsController < ApplicationController
-  before_action :set_artist, only: %i[ show edit update destroy ]
+  #before_action :set_artist, only: %i[ show edit update destroy ]
+  before_action :read_artist, only: [:index]
+  before_action :set_artist, only: [:show]
 
   # GET /artists or /artists.json
   def index
-    @artists = Artist.all
+    #@artists = Artist.all
   end
 
   # GET /artists/1 or /artists/1.json
@@ -57,9 +59,15 @@ class ArtistsController < ApplicationController
   end
 
   private
+    def read_artist
+      @artists = Artist.all
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_artist
-      @artist = Artist.find(params[:id])
+      if params[:id]
+        @artist = Artist.find(params[:id])
+      end
     end
 
     # Only allow a list of trusted parameters through.

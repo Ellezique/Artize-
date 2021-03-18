@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2021_03_18_021727) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  #from active storage installation
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_03_18_021727) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
+   #from active storage installation
   create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
@@ -37,12 +39,14 @@ ActiveRecord::Schema.define(version: 2021_03_18_021727) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+   #from active storage installation
   create_table "active_storage_variant_records", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  #Generated scaffold for artists
   create_table "artists", force: :cascade do |t|
     t.string "artist_first_name"
     t.string "artist_last_name"
@@ -51,12 +55,14 @@ ActiveRecord::Schema.define(version: 2021_03_18_021727) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  #Generated scaffold for artmedia
   create_table "artmedia", force: :cascade do |t|
     t.string "artmedium_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+ #Generated scaffold for artworks
   create_table "artworks", force: :cascade do |t|
     t.string "art_title"
     t.text "art_description"
@@ -67,12 +73,14 @@ ActiveRecord::Schema.define(version: 2021_03_18_021727) do
     t.index ["artist_id"], name: "index_artworks_on_artist_id"
   end
 
+  #Generated scaffold for styles
   create_table "styles", force: :cascade do |t|
     t.string "style_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  #From Devise installation
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

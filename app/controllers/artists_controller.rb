@@ -1,8 +1,7 @@
 class ArtistsController < ApplicationController
   #before_action :set_artist, only: %i[ show edit update destroy ]
-  before_action :read_artist, only: [:index]
   before_action :set_artist, only: [:show]
-  
+  before_action :read_artist, only: [:index]
   
 
   # GET /artists or /artists.json
@@ -25,6 +24,9 @@ class ArtistsController < ApplicationController
 
   # POST /artists or /artists.json
   def create
+   # artist = Artist.find_by_name(artist_params[:artist_first_name], artist_params[:artist_last_name])
+   # artist = artist ||Artist.new(artist_first_name: artist_params[:artist_first_name], artist_last_name: artist_params[:artist_last_name])
+    
     @artist = Artist.new(artist_params)
 
     respond_to do |format|

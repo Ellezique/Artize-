@@ -22,5 +22,6 @@
   <%= @artwork.artist.artist_name %>
 </p>
 
-<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
-<%= link_to 'Back', artworks_path %>
+<br>
+<%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> |
+<%= link_to 'Back', artworks_path, class:"btn btn-primary btn-sm" %>

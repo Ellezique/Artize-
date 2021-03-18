@@ -22,5 +22,9 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+
+<%= link_to "Add Artwork", new_artwork_path, class:"btn btn-primary btn-lg"%>
+<br>
+<br>
+<%= link_to 'Edit', edit_artist_path(@artist), class:"btn btn-primary btn-sm" %> |
+<%= link_to 'Back', artists_path, class:"btn btn-primary btn-sm" %>

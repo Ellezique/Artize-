@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   #before_action :set_artist, only: %i[ show edit update destroy ]
-  before_action :set_artist, only: [:show]
+  before_action :set_artist, only: [:show, :destroy]
   before_action :read_artist, only: [:index]
   
 

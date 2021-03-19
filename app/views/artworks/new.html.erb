@@ -1,9 +1,9 @@
 <h1>New Artwork</h1>
+<p>If the artist is not listed below, please go <%= link_to "create a new artist", new_artist_path%> first, and then add an artwork from there.</p>
 
 <%= render 'form', artwork: @artwork %>
 
 <br>
 
-<p><%= link_to "If the artist is not listed, please go create a new artist before creating an artwork", new_artist_path%></p>
 
 <%= link_to 'Back', artworks_path, class:"btn btn-primary btn-sm"  %>

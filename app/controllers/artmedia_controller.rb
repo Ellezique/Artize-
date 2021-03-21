@@ -64,6 +64,6 @@ class ArtmediaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artmedium_params
-      params.require(:artmedium).permit(:artmedium_description)
+      params.require(:artmedium).permit(:artmedium)
     end
 end

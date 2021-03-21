@@ -17,7 +17,7 @@ class ArtmediaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create artmedium" do
     assert_difference('Artmedium.count') do
-      post artmedia_url, params: { artmedium: { artmedium_description: @artmedium.artmedium_description } }
+      post artmedia_url, params: { artmedium: { artmedium: @artmedium.artmedium } }
     end
 
     assert_redirected_to artmedium_url(Artmedium.last)
@@ -34,7 +34,7 @@ class ArtmediaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update artmedium" do
-    patch artmedium_url(@artmedium), params: { artmedium: { artmedium_description: @artmedium.artmedium_description } }
+    patch artmedium_url(@artmedium), params: { artmedium: { artmedium: @artmedium.artmedium } }
     assert_redirected_to artmedium_url(@artmedium)
   end
 

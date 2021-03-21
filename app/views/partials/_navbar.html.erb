@@ -1,8 +1,10 @@
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <style>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 </style>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
   <a class="navbar-brand" >Artize</a>
 
 
@@ -31,27 +33,32 @@
       </li>  
       
       <li class="nav-item">
-           <%= link_to "Artworks", artworks_path, class: "nav-link"%>
-      </li>
-      
-      <li class="nav-item">
         <% if user_signed_in? %>
            <%= link_to "Artists", artists_path, class: "nav-link"%>
         <% end %>
       </li> 
-    
+
       <li class="nav-item">
         <% if user_signed_in? %>
-           <%= link_to "Add Artist", new_artist_path, class: "nav-link"%>
-        <% end %>
-      </li> 
-
+           <%= link_to "Artworks", artworks_path, class: "nav-link"%>
+         <% end %>
+      </li>
+        
       <li class="nav-item">
         <% if user_signed_in? %>
            <%= link_to "Add Artwork", new_artwork_path, class: "nav-link"%>
         <% end %>
       </li> 
       
+      <!--It is prefered that artists only be created when new art is added to the database.-->
+      <!--
+      <li class="nav-item">
+        <% if user_signed_in? %>
+           <%= link_to "Add Artist", new_artist_path, class: "nav-link"%>
+        <% end %>
+      </li> 
+      -->
+
       <li class="nav-item">
         <a class="nav-link" href="#">Checkout</a>
       </li>

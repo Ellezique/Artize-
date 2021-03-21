@@ -14,7 +14,7 @@ class ArtmediaTest < ApplicationSystemTestCase
     visit artmedia_url
     click_on "New Artmedium"
 
-    fill_in "Artmedium description", with: @artmedium.artmedium_description
+    fill_in "Artmedium", with: @artmedium.artmedium
     click_on "Create Artmedium"
 
     assert_text "Artmedium was successfully created"
@@ -25,7 +25,7 @@ class ArtmediaTest < ApplicationSystemTestCase
     visit artmedia_url
     click_on "Edit", match: :first
 
-    fill_in "Artmedium description", with: @artmedium.artmedium_description
+    fill_in "Artmedium", with: @artmedium.artmedium
     click_on "Update Artmedium"
 
     assert_text "Artmedium was successfully updated"

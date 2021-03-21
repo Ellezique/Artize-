@@ -23,6 +23,7 @@ class ArtworksController < ApplicationController
 
   # POST /artworks or /artworks.json
   def create
+
     @artwork = Artwork.new(artwork_params)
 
     respond_to do |format|

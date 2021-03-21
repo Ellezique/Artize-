@@ -14,7 +14,7 @@ class StylesTest < ApplicationSystemTestCase
     visit styles_url
     click_on "New Style"
 
-    fill_in "Style description", with: @style.style_description
+    fill_in "Style", with: @style.style
     click_on "Create Style"
 
     assert_text "Style was successfully created"
@@ -25,7 +25,7 @@ class StylesTest < ApplicationSystemTestCase
     visit styles_url
     click_on "Edit", match: :first
 
-    fill_in "Style description", with: @style.style_description
+    fill_in "Style", with: @style.style
     click_on "Update Style"
 
     assert_text "Style was successfully updated"

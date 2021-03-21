@@ -17,7 +17,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create style" do
     assert_difference('Style.count') do
-      post styles_url, params: { style: { style_description: @style.style_description } }
+      post styles_url, params: { style: { style: @style.style } }
     end
 
     assert_redirected_to style_url(Style.last)
@@ -34,7 +34,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update style" do
-    patch style_url(@style), params: { style: { style_description: @style.style_description } }
+    patch style_url(@style), params: { style: { style: @style.style } }
     assert_redirected_to style_url(@style)
   end
 

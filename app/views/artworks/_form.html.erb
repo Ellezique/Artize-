@@ -3,15 +3,17 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :artist, label_method: :artist_name, value_method: :id, include_blank: false %>
+    <%= f.association :artist, label: "Select Artist", label_method: :artist_name, value_method: :id, include_blank: false %>
     <%= f.input :art_title, label: "Title of Artwork", required: true, placeholder: "Write the artwork title" %>
     <%= f.input :art_description, label: "Description", placeholder: "Write a description for the artwork" %>
     <%= f.input :available %>
+
    
-    
+
   </div>
 
    <div class="form-actions">
     <%= f.button :submit, class:"btn btn-primary btn-lg"  %>
   </div>
 <% end %>
+

@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+$rock_salt: 'Rock Salt', cursive;
+.navbar-brand {
+    font-family: $rock_salt;
+}
+
+.display-font {
+    font-family: $rock_salt;
+}
+
 .home_image {
     width: 100%;
     height: 100%;
@@ -14,3 +25,4 @@
     transform: scale(0.99); 
     filter: grayscale(20%);
 }
+

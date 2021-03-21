@@ -8,7 +8,8 @@
     <%= f.input :art_description, label: "Description", placeholder: "Write a description for the artwork" %>
     <%= f.input :available %>
     <%= f.association :styles, collection: Style.order(:style), label: "Select Styles: ", as: :check_boxes, label_method: :style, value_method: :id %>
-    <%= f.association :artmedia, collection: Artmedium.order(:artmedium), label: "Select Medium: ", as: :check_boxes, label_method: :artmedium, value_method: :id %>
+    <%= f.association :artmedia, collection: Artmedium.order(:artmedium), label: "Select Media: ", as: :check_boxes, label_method: :artmedium, value_method: :id %>
+  
   </div>
 
    <div class="form-actions">

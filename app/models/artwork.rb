@@ -5,6 +5,8 @@ class Artwork < ApplicationRecord
   has_many :artworks_artmedia, dependent: :destroy
   has_many :artmedia, through: :artworks_artmedia
 
+  accepts_nested_attributes_for :styles, :artmedia
+
   def list_styles
     (self.styles.map { |style| style.style }).join(", ")
   end

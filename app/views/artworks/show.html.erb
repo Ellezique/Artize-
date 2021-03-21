@@ -22,6 +22,17 @@
   <%= @artwork.artist.artist_name %>
 </p>
 
+<p>
+  <strong>Style:</strong>
+  <%= @artwork.list_styles %>
+</p>
+
+<p>
+  <strong>Art Medium:</strong>
+  <%= @artwork.list_artmedia %>
+</p>
+
+
 <br>
 <%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> |
 <%= link_to 'Back', artworks_path, class:"btn btn-primary btn-sm" %>

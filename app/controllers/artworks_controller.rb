@@ -2,8 +2,7 @@ class ArtworksController < ApplicationController
   #before_action :set_artwork, only: %i[ show edit update destroy ]
   before_action :read_artworks, only: [:index]
   before_action :set_artwork, only: [:show, :destroy, :edit, :update]
-  #has_one_attached :artimage  
-  
+
 
   # GET /artworks or /artworks.json
   def index
@@ -27,6 +26,7 @@ class ArtworksController < ApplicationController
   def create
     
     @artwork = Artwork.new(artwork_params)
+    @artwork.artimage.attach(artwork_params[:artimage])
 
     respond_to do |format|
       if @artwork.save
@@ -41,6 +41,8 @@ class ArtworksController < ApplicationController
 
   # PATCH/PUT /artworks/1 or /artworks/1.json
   def update
+    @artwork.artimage.attach(artwork_params[:artimage])
+    
     respond_to do |format|
       if @artwork.update(artwork_params)
         format.html { redirect_to @artwork, notice: "Artwork was successfully updated." }
@@ -76,6 +78,6 @@ class ArtworksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artwork_params
-      params.require(:artwork).permit(:art_title, :art_description, :available, :artist_id, :artmedium_ids => [], :style_ids => [])
+      params.require(:artwork).permit(:art_title, :artimage, :art_description, :available, :artist_id, :artmedium_ids => [], :style_ids => [])
     end
 end

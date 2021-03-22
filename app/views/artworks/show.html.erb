@@ -3,7 +3,9 @@
 
 <div class="card">
   <div class="card-body">
-       <img class="card-img-top" src="..." alt="Card image cap">
+      <% if @artwork.artimage.attached? %>
+        <%= image_tag @artwork.artimage %>
+      <% end %>
 
       <p>
         <strong>Art title:</strong>

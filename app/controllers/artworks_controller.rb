@@ -1,7 +1,9 @@
 class ArtworksController < ApplicationController 
   #before_action :set_artwork, only: %i[ show edit update destroy ]
   before_action :read_artworks, only: [:index]
-  before_action :set_artwork, only: [:show, :destroy]
+  before_action :set_artwork, only: [:show, :destroy, :edit, :update]
+  #has_one_attached :artimage  
+  
 
   # GET /artworks or /artworks.json
   def index
@@ -23,7 +25,7 @@ class ArtworksController < ApplicationController
 
   # POST /artworks or /artworks.json
   def create
-
+    
     @artwork = Artwork.new(artwork_params)
 
     respond_to do |format|

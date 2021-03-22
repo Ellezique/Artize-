@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="row">
+        <% @artworks.each do |artwork| %>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <p> = image_tag @artwork.artimage, class:"card-img-top" </p>
+                    <div class="card-body">
+                        <h5 class ="card-title"><%= link_to artwork.art_title, artwork_path(artwork.id) %></h5>
+                        <p class="card-text"><%= artwork.art_description %></p>
+                        <p class="card-text">Available: <%= artwork.available %></p>
+                        <p class="card-text">Artist: <%= link_to artwork.artist.artist_name, artist_path(artwork.artist.id) %></p>
+                        <%= link_to 'Show More', artwork, class:"btn btn-primary btn-sm" %>
+                        <%= link_to 'Edit', edit_artwork_path(artwork), class:"btn btn-primary btn-sm"  %>
+                        <%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary btn-sm"  %>
+                    </div>
+                </div>       
+            </div>
+        <% end %>
+    </div>
+</div>

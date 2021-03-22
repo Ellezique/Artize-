@@ -1,38 +1,43 @@
 
-
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Art title:</strong>
-  <%= @artwork.art_title %>
-</p>
+<div class="card">
+  <div class="card-body">
+       <img class="card-img-top" src="..." alt="Card image cap">
 
-<p>
-  <strong>Art description:</strong>
-  <%= @artwork.art_description %>
-</p>
+      <p>
+        <strong>Art title:</strong>
+        <%= @artwork.art_title %>
+      </p>
 
-<p>
-  <strong>Available:</strong>
-  <%= @artwork.available %>
-</p>
+      <p>
+        <strong>Art description:</strong>
+        <%= @artwork.art_description %>
+      </p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @artwork.artist.artist_name %>
-</p>
+      <p>
+        <strong>Available:</strong>
+        <%= @artwork.available %>
+      </p>
 
-<p>
-  <strong>Style:</strong>
-  <%= @artwork.list_styles %>
-</p>
+      <p>
+        <strong>Artist:</strong>
+        <%= @artwork.artist.artist_name %>
+      </p>
 
-<p>
-  <strong>Art Medium:</strong>
-  <%= @artwork.list_artmedia %>
-</p>
+      <p>
+        <strong>Style:</strong>
+        <%= @artwork.list_styles %>
+      </p>
 
+      <p>
+        <strong>Art Medium:</strong>
+        <%= @artwork.list_artmedia %>
+      </p>
+      <%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> |
+      <%= link_to 'Back', artworks_path, class:"btn btn-primary btn-sm" %>
+  </div>
+</div>
 
 <br>
-<%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> |
-<%= link_to 'Back', artworks_path, class:"btn btn-primary btn-sm" %>
+

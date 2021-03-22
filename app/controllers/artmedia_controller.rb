@@ -3,7 +3,8 @@ class ArtmediaController < ApplicationController
 
   # GET /artmedia or /artmedia.json
   def index
-    @artmedia = Artmedium.all
+    #@artmedia = Artmedium.all  repaced by alphabetical order below
+    @artmedia = Artmedium.order(:artmedium)
   end
 
   # GET /artmedia/1 or /artmedia/1.json

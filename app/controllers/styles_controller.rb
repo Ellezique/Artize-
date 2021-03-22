@@ -3,7 +3,8 @@ class StylesController < ApplicationController
 
   # GET /styles or /styles.json
   def index
-    @styles = Style.all
+    #@styles = Style.all replaced by alphabetical ordering below
+    @styles = Style.order(:style)
   end
 
   # GET /styles/1 or /styles/1.json

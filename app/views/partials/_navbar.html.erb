@@ -16,7 +16,7 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           <% else %>
             <%= link_to "Log In", new_user_session_path, class: "nav-link" %> 
-             <!--Sign up displays below log in. Remove from this list item and place in own list so that it displays next to log in -->
+             <!--Sign up and log in display vertically in relation to each other, if both in the same list item, rather than horizontally next to each other. Remove from this list item and place in own list so that sign up displays next to log in in navbar-->
         <% end %>
       </li>
      
@@ -48,6 +48,17 @@
         <% end %>
       </li> 
       
+      <li class="nav-item">
+        <% if user_signed_in? %>
+           <%= link_to "Style",  styles_path, class: "nav-link"%>
+        <% end %>
+      </li> 
+
+       <li class="nav-item">
+        <% if user_signed_in? %>
+           <%= link_to "Media", artmedia_path, class: "nav-link"%>
+        <% end %>
+      </li> 
       <!--It is prefered that artists only be created when new art is added to the database.-->
       <!--
       <li class="nav-item">
@@ -56,10 +67,6 @@
         <% end %>
       </li> 
       -->
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Checkout</a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>

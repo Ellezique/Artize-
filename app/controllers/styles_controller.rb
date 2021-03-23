@@ -1,4 +1,5 @@
 class StylesController < ApplicationController
+  before_action :check_role #Admin only access method located in application_controller.rb
   before_action :set_style, only: %i[ show edit update destroy ]
 
   # GET /styles or /styles.json

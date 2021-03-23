@@ -23,9 +23,56 @@ Things you may want to cover:
 
 * ...
 
-# T2A2 - Marketplace Project #
-Gizelle v.Z.
+# T2A2 - Marketplace Project 
+#### Artize: an online gallery for users to buy and sell art.
+###### By Gizelle v.Z
 -------
+## SETUP ##
+Please ensure that you:
+- have Ruby on Rails and PostgreSQL installed and setup on your computer;
+- are familiar with command line (terminal); and
+- Have a default text editor (e.g. Visual Studio Code) installed and setup.
+####Clone from Github Repositry
+- Clone to your local development environment:
+    - Go to this application's github repository. Select the green "Code" button, which will then display a drop down menu. From the drop down menu, select "Download ZIP".
+    - PC: Once the zip folder has downloaded, right click on the zip folder and select "Extract All" from the dropdown menu. You may then choose where you would like to save the extracted folder on your PC, but keep all these files together because they contain everything from the repository. Mac: You can unzip the folder from Finder. Click the unzip button and select "unzip" from the dropdown menu and select where you would like to extract the folder to. A Finder window will open. Select "unzip the entire zip file".
+####Command Line
+- Open your command line (terminal) and navigate to the directory where you saved the clone in your local environment.
+- Install dependencies by running the following in your command line terminal:
+       $  `bundle install`
+- Check node dependencies:
+        $ `yarn install --check-files`
+- Open the directory in your default text editor:
+        $ `code .`
+####PostgreSQL database setup
+- Open your database.yml file and customise the following to your specifications, e.g:
+
+        username: postgres    
+        password: xxxxxxxx
+        host: localhost
+        port: 5432
+- Setup the database and populate presetdata from the seeds file by running the following commands in terminal:
+    $`rails db:reset` 
+
+    $`rails db:migrate` 
+
+    $`rails db:seed`
+
+#### Confirm proper installation and setup
+- Start your server by running:
+    $ `rails s`
+- Open the following url in your browser: http://localhost:3000/
+- The page should load without error.
+
+#### Admin credentials for authorization
+- In the application, sign up as a new user by submitting your email and password.
+- In terminal, run rails consol:
+    `rails c`
+- You can see all users by running:
+    `User.all`
+- You created the last user. Assign an admin roll to the last user.
+    `User.last.add_role :admin`
+
 
 ## R7:	Identification of the problem solved by building this particular marketplace app. ##
 
@@ -43,7 +90,7 @@ Gizelle v.Z.
 ###  Target audience ### 
 ###  Tech stack ### 
 
-##### Project Management, Planning and Software##### 
+##### Project Management, Planning and Software ##### 
 - Trello Board to track tasks and progress during planning and development
 - Draw.io used to create Entity Realationship Diagram
 - PGAdmin to view database
@@ -51,13 +98,13 @@ Gizelle v.Z.
 - Ruby on Rails (including HTML and SCSS)
 - PostgreSQL 
 ##### Gems ##### 
-- Bootstrap (Styling)
+- Bootstrap (Front-end styling)
 - Devise (Authentication)
-- Rolify and CanCanCan (Authorisation)
-##### Images ##### 
+- Rolify (Authorisation)
+##### Image Upload ##### 
 - Cloudinary 
-- Rails aActive Storage
-##### Repo ##### 
+- Rails Active Storage
+##### Repository ##### 
 - GitHub
 ##### Deployment ####
 - Heroku

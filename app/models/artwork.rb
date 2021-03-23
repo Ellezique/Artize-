@@ -14,4 +14,5 @@ class Artwork < ApplicationRecord
   def list_artmedia
     (self.artmedia.map { |artmedium| artmedium.artmedium }).join(", ")
   end
+
 end

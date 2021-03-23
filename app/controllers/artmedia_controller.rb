@@ -1,4 +1,5 @@
 class ArtmediaController < ApplicationController
+  before_action :check_role #Admin only access method located in application_controller.rb
   before_action :set_artmedium, only: %i[ show edit update destroy ]
 
   # GET /artmedia or /artmedia.json

@@ -1,5 +1,8 @@
 class ArtworksController < ApplicationController 
   #before_action :set_artwork, only: %i[ show edit update destroy ]
+  
+  #before_action :check_role, only: [:destroy, :edit, :update] #Admin only access method located in application_controller.rb
+  
   before_action :read_artworks, only: [:index]
   before_action :set_artwork, only: [:show, :destroy, :edit, :update]
 
@@ -80,4 +83,6 @@ class ArtworksController < ApplicationController
     def artwork_params
       params.require(:artwork).permit(:art_title, :artimage, :art_description, :available, :artist_id, :artmedium_ids => [], :style_ids => [])
     end
+
+
 end

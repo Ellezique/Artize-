@@ -6,12 +6,15 @@
             <p class="lead">For Art. Formed by Art.</p>
             <hr class="my-4">
             <p>Artize is an online Gallery to buy and sell art direct, without the gallery commission.*</p>
+            <p>To view the rest of this site, you will need to sign up. If you have already signed up, please log in.</p>
             <p class="lead">
                 <!--<a class="btn btn-primary btn-lg" href="#" role="button">Add Profile</a>-->
+                <% if !user_signed_in?%>      
+                    <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary btn-lg"%>
+                    <%= link_to "Log In", new_user_session_path, class:"btn btn-primary btn-lg"%>
+                <% end %>
                 <%= link_to "Artworks", artworks_path, class:"btn btn-primary btn-lg"%>
                 <%= link_to "Artists", artists_path, class:"btn btn-primary btn-lg"%>
-                <%= link_to "Add Artwork", new_artwork_path, class:"btn btn-primary btn-lg"%>
-                <%= link_to "Add Artist", new_artist_path, class:"btn btn-primary btn-lg"%>
             </p>
         </div>
 

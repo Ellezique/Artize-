@@ -42,7 +42,7 @@ class ArtworksController < ApplicationController
 
   # PATCH/PUT /artworks/1 or /artworks/1.json
   def update
-    @artwork.artimage.attach(artwork_params[:artimage])
+    @artwork.artimage.attach(artwork_params[:artimage]) if artwork_params.has_key?(:artimage)
     
     respond_to do |format|
       if @artwork.update(artwork_params)

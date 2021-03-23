@@ -75,8 +75,15 @@ Please ensure that you:
 
 
 ## R7:	Identification of the problem solved by building this particular marketplace app. ##
+buy and sell
+commission
 
+Show all artworks - more buyers and sellers might join the site 
+By requiring log in first, a user must go to the effort of signing up before proceeding. Whilst exclusivity is in no way a driving force of this web application, it is hoped that the log in requirement will offer some copyright protection for artists whose artworks are being sold on this web app.
 ## R8:	Why is it a problem that needs solving? ##
+Difficult to capitalise on creativity. Need to protect artist's IP.
+Galleries (online and physical) take a lot of commission from artists.
+Direct purchase and sale.
 
 ## R9:	A link (URL) to the deployed app (i.e. website) ##
 
@@ -84,8 +91,16 @@ Please ensure that you:
 
 ## R11:	Description of your marketplace app (website), including: ##
 ### Purpose ###
+Buy and sell art direct wihtout commission.
 ### Functionality / features ### 
+"Only admin can edit or delete an artist. A user can create an artist but cannot edit or delete. Deleting an artist deletes all work by that artist."
+
+Proposed additions:
+- A user can edit an artwork - but this shoule be restricted to only artworks added by them
+- The Style and Media data tables allow for integration of a search and sort feature in future.
+
 ### Sitemap ### 
+![Sitemap](/app/assets/images/sitemap.png)
 ### Screenshots ### 
 ###  Target audience ### 
 ###  Tech stack ### 

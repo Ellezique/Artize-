@@ -12,13 +12,4 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    #Edit own 
-    #def check_role
-	#	if Artworks.new.can_edit? current_user
-	#		return
-	#	else
-	#		flash[:alert] = "You are not authorised!"
-	#		redirect_to root_path
-	#	end
-	#end
 end

@@ -24,10 +24,14 @@ class ArtistsController < ApplicationController
 
   # POST /artists or /artists.json
   def create
-    #artist = Artist.find_by_name: (artist_params[:artist_first_name], artist_params[:artist_last_name])
-    #artist = artist ||Artist.new(artist_params)
     
-    @artist = Artist.new(artist_params)
+    #Prevent duplicate artist entries from being created.
+    @artist = Artist.where(artist_first_name: artist_params[:artist_first_name], artist_last_name: artist_params[:artist_last_name]).first
+    if @artist.nil?
+      @artist = Artist.new(artist_params)
+    end
+
+    #@artist = Artist.new(artist_params)
 
     respond_to do |format|
       if @artist.save
@@ -63,8 +67,8 @@ class ArtistsController < ApplicationController
   end
 
   private
-    def read_artist
-      @artists = Artist.all
+    def read_artist   #Arrange by newest artist first.
+      @artists = Artist.order(created_at: :desc)
     end
 
     # Use callbacks to share common setup or constraints between actions.

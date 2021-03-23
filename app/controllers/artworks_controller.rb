@@ -29,7 +29,7 @@ class ArtworksController < ApplicationController
   def create
     
     @artwork = Artwork.new(artwork_params)
-    @artwork.artimage.attach(artwork_params[:artimage])
+    @artwork.artimage.attach(artwork_params[:artimage]) #if artwork_params.has_key?(:artwork)
 
     respond_to do |format|
       if @artwork.save
@@ -67,9 +67,9 @@ class ArtworksController < ApplicationController
   end
 
   private
-    #from index above
+    #from index above. Order by artist last name. Groups arworks togethe by artist. Eager_load query takes longer than includes.
     def read_artworks   
-      @artworks = Artwork.all
+      @artworks = Artwork.order("artists.artist_last_name") .includes(:artist)
     end
 
     # Use callbacks to share common setup or constraints between actions.

@@ -68,7 +68,7 @@ class ArtistsController < ApplicationController
 
   private
     def read_artist   #Arrange by newest artist first.
-      @artists = Artist.order(created_at: :desc)
+      @artists = Artist.order(created_at: :desc).preload(:artworks)
     end
 
     # Use callbacks to share common setup or constraints between actions.

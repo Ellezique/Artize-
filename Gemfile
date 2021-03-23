@@ -68,3 +68,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem "rolify", "~> 5.3"
+
+gem "stripe", "~> 5.30"

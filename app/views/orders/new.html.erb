@@ -1,0 +1,19 @@
+<h1>Your Order</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @artwork.art_title %></td>
+            <td><%= @artwork.artist.artist_name %></td>
+            <td><%= number_to_currency @artwork.price %></td>
+        </tr>
+    </tbody>
+</table>
+
+<button id="pay-now">Checkout</button>

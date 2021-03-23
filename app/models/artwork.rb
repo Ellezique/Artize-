@@ -6,6 +6,7 @@ class Artwork < ApplicationRecord
   has_many :artmedia, through: :artworks_artmedia
   accepts_nested_attributes_for :styles, :artmedia 
   has_one_attached :artimage  
+  validates :price, :inclusion => 0..999999
 
   def list_styles
     (self.styles.map { |style| style.style }).join(", ")

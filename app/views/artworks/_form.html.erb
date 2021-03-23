@@ -5,11 +5,10 @@
   <div class="form-inputs">
     <%= f.association :artist, collection: Artist.order(:artist_first_name), label: "Select Artist", label_method: :artist_name, value_method: :id, include_blank: false %>
     <%= f.input :art_title, label: "Title of Artwork", required: true, placeholder: "Write the artwork title" %>
-    
     <%= f.file_field :artimage %>
-    
     <%= f.input :art_description, label: "Description", placeholder: "Write a description for the artwork" %>
     <%= f.input :available %>
+    <%= f.number_field :price, label: "Price", min: 0, max: 999999, step: 0.05 %>
     <%= f.association :styles, collection: Style.order(:style), label: "Select Styles: ", as: :check_boxes, label_method: :style, value_method: :id %>
     <%= f.association :artmedia, collection: Artmedium.order(:artmedium), label: "Select Media: ", as: :check_boxes, label_method: :artmedium, value_method: :id %>
   

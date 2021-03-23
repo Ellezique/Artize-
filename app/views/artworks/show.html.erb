@@ -16,12 +16,7 @@
         <strong>Art description:</strong>
         <%= @artwork.art_description %>
       </p>
-
-      <p>
-        <strong>Available:</strong>
-        <%= @artwork.available %>
-      </p>
-
+   
       <p>
         <strong>Artist:</strong>
         <%= @artwork.artist.artist_name %>
@@ -36,6 +31,21 @@
         <strong>Art Medium:</strong>
         <%= @artwork.list_artmedia %>
       </p>
+
+      <p>
+        <strong>Available:</strong>
+        <%= @artwork.available %>
+      </p>
+      
+      <p>
+        <strong>Price:</strong>
+        <%= number_to_currency @artwork.price %>
+      </p>
+
+      <p>
+        <%= link_to 'Buy Now', new_order_path(artwork_id: artwork.id), class:"btn btn-primary btn-sm" %>
+      </p>
+
       <%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> |
       <%= link_to 'Back', artworks_path, class:"btn btn-primary btn-sm" %>
   </div>

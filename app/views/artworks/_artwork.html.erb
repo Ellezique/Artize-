@@ -11,8 +11,12 @@
                         <h5 class ="card-title"><%= link_to artwork.art_title, artwork_path(artwork.id) %></h5>
                         <p class="card-text"><%= artwork.art_description %></p>
                         <p class="card-text">Available: <%= artwork.available %></p>
+                        <p class="card-text">Price: <%= number_to_currency artwork.price %></p>
                         <p class="card-text">Artist: <%= link_to artwork.artist.artist_name, artist_path(artwork.artist.id) %></p>
                         <%= link_to 'Show More', artwork, class:"btn btn-primary btn-sm" %>
+                        <%= link_to 'Buy Now', new_order_path(artwork_id: artwork.id), class:"btn btn-primary btn-sm" %>
+                        <br>
+                        <br>
                         <%= link_to 'Edit', edit_artwork_path(artwork), class:"btn btn-primary btn-sm"  %>
                         <%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary btn-sm"  %>
                     </div>

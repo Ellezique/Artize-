@@ -1,8 +1,6 @@
 class ArtworksController < ApplicationController 
   #before_action :set_artwork, only: %i[ show edit update destroy ]
-  
   #before_action :check_role, only: [:destroy, :edit, :update] #Admin only access method located in application_controller.rb
-  
   before_action :read_artworks, only: [:index]
   before_action :set_artwork, only: [:show, :destroy, :edit, :update]
 

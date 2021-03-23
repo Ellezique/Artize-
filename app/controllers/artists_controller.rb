@@ -1,5 +1,6 @@
 class ArtistsController < ApplicationController
   #before_action :set_artist, only: %i[ show edit update destroy ]
+  before_action :check_role, only: [:destroy, :edit, :update] #Admin only access method located in application_controller.rb
   before_action :set_artist, only: [:show, :destroy]
   before_action :read_artist, only: [:index, :show]
   

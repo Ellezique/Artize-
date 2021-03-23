@@ -16,9 +16,13 @@
       <tr>
         <td><%= link_to artist.artist_name, artist_path(artist.id) %></td>
         <td><%= artist.about_artist %></td>
-        <td><%= link_to 'Show', artist %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <% if @check_role == true %>
+                <td><%= link_to 'Show', artist %></td>
+                <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+                <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
       </tr>
    <% end %> 
   </tbody>

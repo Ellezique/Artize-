@@ -26,5 +26,7 @@
 <%= link_to "Add Artwork", new_artwork_path, class:"btn btn-primary btn-lg"%>
 <br>
 <br>
-<%= link_to 'Edit', edit_artist_path(@artist), class:"btn btn-primary btn-sm" %> |
+<% if @check_role == true %>
+  <%= link_to 'Edit', edit_artist_path(@artist), class:"btn btn-primary btn-sm" %> |   
+<% end %>
 <%= link_to 'Back', artists_path, class:"btn btn-primary btn-sm" %>

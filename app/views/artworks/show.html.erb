@@ -43,7 +43,7 @@
       </p>
 
       <p>
-        <%= link_to 'Buy Now', new_order_path(artwork_id: artwork.id), class:"btn btn-primary btn-sm" %>
+        <%= link_to 'Buy Now', new_order_path(artwork_id: @artwork.id), class:"btn btn-primary btn-sm" %>
       </p>
 
       <%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> |
@@ -51,5 +51,4 @@
   </div>
 </div>
 
-<br>
 

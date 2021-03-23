@@ -1,5 +1,5 @@
 <h1>Your Order</h1>
-<table class="table">
+<table>
     <thead>
         <tr>
             <th>Title</th>
@@ -17,3 +17,15 @@
 </table>
 
 <button id="pay-now">Checkout</button>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    const stripe = Stripe('<%= ENV["STRIPE_PK_TEST"] %>')
+
+    function redirectToStripe() {
+        stripe.redirectToCheckout({ sessionId: '<%= @session.id %>'})
+    }
+
+    document.querySelector("#pay-now").addEventListener("click", redirectToStripe)
+</script>

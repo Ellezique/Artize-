@@ -102,13 +102,31 @@ Proposed additions:
 ### Sitemap ### 
 ![Sitemap](/app/assets/images/sitemap.png)
 ### Screenshots ### 
+![Home](/app/assets/images/home.PNG)
+![Sign Up Page](/app/assets/images/signup.PNG)
+![Login Page](/app/assets/images/loginpage.PNG)
+![Login](/app/assets/images/homelogin.PNG)
+![Artwork](/app/assets/images/artwork.PNG)
+![Artists](/app/assets/images/artists.PNG)
+![Artist Show](/app/assets/images/artistshow.PNG)
+![Art Show](/app/assets/images/artshow.PNG)
+![Order](/app/assets/images/order.PNG)
+![Stripe](/app/assets/images/stripe.PNG)
+![New Art](/app/assets/images/newart.PNG)
+![Styles](/app/assets/images/styles.PNG)
+![Show](/app/assets/images/show.PNG)
+![Edit](/app/assets/images/editing.PNG)
+![Destroy](/app/assets/images/destroy.PNG)
+![Artmedia](/app/assets/images/artmedia.PNG)
+
 ###  Target audience ### 
 ###  Tech stack ### 
 
 ##### Project Management, Planning and Software ##### 
 - Trello Board to track tasks and progress during planning and development
 - Draw.io used to create Entity Realationship Diagram
-- PGAdmin to view database
+- Balsamiq used to create Wireframes
+- PGAdmin to view database 
 ##### Development & Database ##### 
 - Ruby on Rails (including HTML and SCSS)
 - PostgreSQL 
@@ -116,6 +134,7 @@ Proposed additions:
 - Bootstrap (Front-end styling)
 - Devise (Authentication)
 - Rolify (Authorisation)
+- Simple Form
 ##### Image Upload ##### 
 - Cloudinary 
 - Rails Active Storage
@@ -126,7 +145,15 @@ Proposed additions:
 
 ### R12:	User stories for your app ### 
 ### R13:	Wireframes for your app ### 
+![Wireframes](/app/assets/images/artizewireframes.png)
+
 ### R14:	An ERD for your app ### 
+The original draft ERD included tables for users to be an artist or customer. This design became problematic when dealing with associations and was abandoned to project time constraints. Draft ERD:
+![Original ERD](/app/assets/images/ARTscaffoldREVISED.png)
+
+The final ERD has a much simpler design. Devise was used to create Users. Stripe manages the Order. Cloudinary is used to add images to Artworks. The Artist and Customer distinction was removed. The Style and Artmedia tables allow for addition of a search bar feature in future. The profile table can easily be incorporated in future.
+![ERD](/app/assets/images/artizeerdfinal.png)
+
 ### R15:	Explain the different high-level components (abstractions) in your app ### 
 ### R16:	Detail any third party services that your app will use ###
 ### R17:	Describe your projects models in terms of the relationships (active record associations) they have with each other ### 
@@ -135,3 +162,14 @@ Proposed additions:
 ### R20	Describe the way tasks are allocated and tracked in your project ###
 Trello Board was utilised to track tasks and progress during planning and development. The board can be accessed online here: 
 https://trello.com/b/dkOuEH0Y/artize-marketplace-erd
+
+![Trello board](/app/assets/images/Trello.PNG)
+![New app card](/app/assets/images/newapp.PNG)
+![Database card](/app/assets/images/postgresqldb.PNG)
+![Style and media card](/app/assets/images/styleandmedia.PNG)
+![Cloudinary card](/app/assets/images/cloudinary.PNG)
+![Art and Artist card](/app/assets/images/artandartist.PNG)
+![Queries card](/app/assets/images/queries.PNG)
+![Styling card](/app/assets/images/styling.PNG)
+![Stripe](/app/assets/images/stripetrello.PNG)
+![Deployment](/app/assets/images/deployment.PNG)

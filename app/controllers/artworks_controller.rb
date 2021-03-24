@@ -27,7 +27,7 @@ class ArtworksController < ApplicationController
   def create
     
     @artwork = Artwork.new(artwork_params)
-    @artwork.artimage.attach(artwork_params[:artimage]) #if artwork_params.has_key?(:artwork)
+    @artwork.artimage.attach(artwork_params[:artimage]) 
 
     respond_to do |format|
       if @artwork.save
@@ -42,7 +42,7 @@ class ArtworksController < ApplicationController
 
   # PATCH/PUT /artworks/1 or /artworks/1.json
   def update
-    @artwork.artimage.attach(artwork_params[:artimage]) if artwork_params.has_key?(:artimage)
+    @artwork.artimage.attach(artwork_params[:artimage]) if artwork_params.has_key?(:artimage) #the if statement ensures that the artwork data can be updated without destroying an already attached image.
     
     respond_to do |format|
       if @artwork.update(artwork_params)

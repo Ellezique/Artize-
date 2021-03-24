@@ -5,7 +5,6 @@ class CreateArtworks < ActiveRecord::Migration[6.1]
       t.text :art_description
       t.boolean :available
       t.references :artist, null: false, foreign_key: true
-
       t.timestamps
     end
   end

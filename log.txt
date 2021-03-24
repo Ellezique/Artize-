@@ -1,0 +1,449 @@
+commit 2cf8f0c710bbc37c63c15ec0a5d4f16cb289891c
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 24 01:54:22 2021 +1000
+
+    Update artworks controller update method so that an already attached image is not destroyed if the artwork data is updated.
+
+commit 69f9a1b7425bc6357b7b3b50742fe63cc82289ac
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 24 01:06:31 2021 +1000
+
+    Only admin can edit or delete an artist. A user can create an artist but cannot edit or delete. Deleting an artist deletes all work by that artist.
+
+commit 5ee8b8d4da96d4e3220ff5e4fe1895dd29fd6451
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 24 00:17:59 2021 +1000
+
+    Stripe frontend. Checkout not working without refresh.
+
+commit cbc58692673405f51074048f57bbfd98f83f0d1f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Tue Mar 23 22:47:14 2021 +1000
+
+    Stripe backend. OrdersController.
+
+commit b09b11e67b4681c1f30bb6d77ca43002f84fdbe9
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Tue Mar 23 19:44:19 2021 +1000
+
+    generate AddPriceToArtworks.
+
+commit 282cd926da49b015b9a78bcd26b49cba9dbf190f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Tue Mar 23 18:36:07 2021 +1000
+
+    Add includes query on artworks. Add card styling.
+
+commit a003c3439ba8342afaa6c7160598bea1563b8e79
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Tue Mar 23 16:34:32 2021 +1000
+
+    Install rolify and admin user role assigned
+
+commit 7aa1af484563497e426176332dcfc9b62b6b2586
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 22 23:40:40 2021 +1000
+
+    Add cloudinary.
+
+commit 7f94a973b23865fd5100b252871075a62ccf1b20
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 22 21:32:22 2021 +1000
+
+    Crud on artworks, make card partial, render in index, image tags not set up with cloudinary yet
+
+commit 06fde8dc6e6069f7250011c7a86187b55c9ee204
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 22 18:28:25 2021 +1000
+
+    Create Readme
+
+commit 6b34f3ac03a7bd716bf24908a7460b06ee51f31f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 22 16:10:18 2021 +1000
+
+    Navbar links for crud style and artmedia, organised in alphabetical table(controller index order.
+
+commit d03a34a8a59cd51523be5a8bfe6db4f5799abf5f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 22 01:30:34 2021 +1000
+
+    Update navbar and add sign up, ensure log in and log out messages display
+
+commit 2eda8cc925ee7e5b2eff61a6c706f9fb09981465
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 22 00:40:06 2021 +1000
+
+    Fix google font import and styling
+
+commit 1855a5ca8f39f326b348f10b5ec2bef969aa023f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 22 00:02:56 2021 +1000
+
+    Show user email in navbar when logged in
+
+commit f922d00ade076e5f9706313d20bec33d2155216b
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 21 22:33:46 2021 +1000
+
+    Artworks form, sort artist names alphabetically by first name.
+
+commit 40c8d093c6cfefdf2faa5fda2c589cf4a2446783
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 21 22:20:49 2021 +1000
+
+    New artwork adds styles and media. added accepts_nested_attributes_for :styles, :media to artworks model. Artworks controller update prams to includ ids for styles and artmedia.
+
+commit fbb9bc226ef7abf30ce75d754f60c5641d68086c
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 21 19:02:02 2021 +1000
+
+    New artwork adds styles and media. added accepts_nested_attributes_for :styles, :media to artworks model. Artworks controller update prams to includ ids for styles and artmedia.
+
+commit 52d230986312610f12be33ff83b4755401fd5784
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 21 18:32:13 2021 +1000
+
+    Show styles and artmedia for each artwork
+
+commit 28d183335c271f3f7b44e647dc03c7d17d133401
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 21 17:36:50 2021 +1000
+
+    Artwork helper method to show styles and artmediums. Update artwork views to show Artwork's styles and artmediums
+
+commit f0aa4be71c07de74fcd030e896a7a72d04b36a78
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 21 14:09:34 2021 +1000
+
+    Generate joining tables Artworks_style and Artworks_Artmedia. Add associations has many through. Update seeds file adding styles and media to artworks
+
+commit f4e70a99e9c92195b5cb47e08bd4c9415b446cc5
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Fri Mar 19 13:19:08 2021 +1000
+
+    Add google font for logo and home page
+
+commit acd15c06e35ba73bec77f994dbec2654e6e1f732
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Fri Mar 19 11:51:46 2021 +1000
+
+    Add home page disclaimer, add labels to art and artist new forms, fix destroy in artist and artworks
+
+commit 20b63ea1c3e5d2a222069b285a0f2bfbe1e8413f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 23:00:56 2021 +1000
+
+    Update create method for Artist and Artwork
+
+commit abd97222a45880fa9a0a2b2311d64b1f79a5de1f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 18:34:30 2021 +1000
+
+    Simple form association label_method for artist_name instead of id
+
+commit b31751f8066e0d5861d64ea6678140bb9387eb96
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 15:35:03 2021 +1000
+
+    In artworks index, link all artist names to artist details and list all their artworks
+
+commit cfe3bb830550e473b6ee2e12bfbdba3dde2684d7
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 15:16:20 2021 +1000
+
+    Show and index for art and artworks with links
+
+commit 8b3c564a7c0130ecb9082ffaac869e9fee611e2a
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 14:01:36 2021 +1000
+
+    Private index and show methods for artist and artwork, create partial arworks file with card
+
+commit 0665c727aa9415845c6ce37edaeda523b578d416
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 13:41:53 2021 +1000
+
+    create artist_name method, link artists and link artworks, class table for artworks and artists
+
+commit 32341880dcac8c5513e6066dbd5dadc6d18ca448
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 12:59:39 2021 +1000
+
+    Populate seed.rb, update navbar and link buttons
+
+commit 9c369fd8db42892a138ce720eef2d581bffc9e6d
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 18 12:19:33 2021 +1000
+
+    Rollback and destroy all but user. Generate Media, Style, Artist, Artwork tables
+
+commit 451e74de9a515e9f1684b1ae8a63fb6aea5d084e
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 17 23:00:28 2021 +1000
+
+    Create list_styles and list_artmedia methods
+
+commit aa870ecb410d5a2f540084fec48cd69ab2f80d8c
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 17 22:30:27 2021 +1000
+
+    failed attempts to seed artists and artworks
+
+commit e9c006f7f194f7af30bf131c02240ac121a3f4db
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 17 21:38:38 2021 +1000
+
+    Seeds file, destroy joining table data
+
+commit fc9c46d0225f1a6b319f80f096132dc8174c1a21
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 17 20:59:22 2021 +1000
+
+    Redo table associations
+
+commit b067969a297dd033a57032020e5147c7d224b74c
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 17 16:59:38 2021 +1000
+
+    Rollback and destroy scaffolds for has_and_belongs_to_many joiningtables, replace with generating modeslforjoining tables between artworks andstyle,media,order as is better practice
+
+commit 396f22aa7c24b3aad8eec4d042ae82ea479b3c57
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 17 15:26:47 2021 +1000
+
+    Modify seeds file. Delete scaffold stylesheet again. Stuck on form views artist, artworks, profiles
+
+commit 9376c28c9510cfcbab503ac9e592b4538cd2c0fd
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 17 00:15:22 2021 +1000
+
+    Seeds.rb populate data for styles and artmedia
+
+commit 48721868b2078b873afe1d0a4cc6dc624ae20b5f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Tue Mar 16 23:45:42 2021 +1000
+
+    Rollback, destroy and generate new scaffolds for style and media tables and joining tables
+
+commit 6b820d3129a10c226ee4d8da90da763c751b059a
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Tue Mar 16 19:50:11 2021 +1000
+
+    Add name methods to customer and artist, add address method to customer, update permit, adddraft card to arwork but not replacing formyet
+
+commit abc4fbd5b16a387f63a980709158464d040f6ad1
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Tue Mar 16 17:14:39 2021 +1000
+
+    Rollback database and destroy scaffolds, Generate scaffolds to change joining tables and associations
+
+commit 7cf80183a14898996ba273e2c4b9e7d345d4a647
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Mon Mar 15 23:15:07 2021 +1000
+
+    Amend record associations and add joining tables
+
+commit 742fe51bc02a10026a7299303e9eff3baac137d5
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 22:36:40 2021 +1000
+
+    changes to artist and artwork controllers, and artist and profiles views - need to review associations to link joining tables for user>profile>artist
+
+commit a39ecfd4d35bba361461fb8c53748d615cd17d88
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 18:37:13 2021 +1000
+
+    notes and trivial changes
+
+commit 40b0599d10f192d31e43578cc6f521f6e0a6c8ef
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 16:23:29 2021 +1000
+
+    prior commit also enables user to see art and home page without login by skipping before action authenticate user
+
+commit 054ab07ef84e7ba4f6fb6075a9b93a7d0846b09f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 16:20:14 2021 +1000
+
+    Minor changes to button links
+
+commit 7660ed34e987f3caff81c374a547bc363e6284d3
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 15:58:28 2021 +1000
+
+    add links to buttons and navbar, add home page image hover transition
+
+commit 0884b7518a2ec488d31e673288cde4619ff6788b
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sun Mar 14 14:56:00 2021 +1000
+
+    Add home page buttons and rename navbar sections, add rounded corners and shadow to home page image scss
+
+commit 217fac3bfcadef724c59f4c2992d0fdb4f2c0fc3
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 20:34:33 2021 +1000
+
+    added some routes and created a read_artworks before_action method
+
+commit 4c4c7e2d8412392e7c334dda063950938f43a3b8
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 20:09:54 2021 +1000
+
+    Arworks MVC changes to attach images using cloudinary Model and view but not yet controller - need to return to this.
+
+commit 0eb7cc2d4afa2dc51a2249fbb7eb644cb02ff5b2
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 19:06:50 2021 +1000
+
+    delete scaffold.scss again
+
+commit 94f17eeb4a1d58875e9c87292c9b57dea5c57fd7
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:53:08 2021 +1000
+
+    Generate Artworks scaffold, add associations, migrate database
+
+commit 00d6475932fd815caa3f8130eef0f0847d6de75f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:44:27 2021 +1000
+
+    Generate scaffolds for style and artmedium, migrate databases
+
+commit 738b137c9e6fdc085393ab209d3f9fd3f4c95f7c
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:34:27 2021 +1000
+
+    Generate scaffold style and migrate database
+
+commit 81ca6ebbf322af3aa143dc5a983ebce6687eb168
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:26:28 2021 +1000
+
+    Configure active storage to use cloudinary by updating storage.yml and environments development and production.rb files
+
+commit 7a2096e8b246d0fd357207a7cc8ca25e11246d4e
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:02:21 2021 +1000
+
+    migrate database after installing active storage
+
+commit 09de6bd02f2ece0ca3dc9c11e2b9c0b519bb8131
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 18:00:32 2021 +1000
+
+    Install active storage
+
+commit fa123eb3335705710bd7064e56970208218b6d31
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:48:34 2021 +1000
+
+    delete scaffold.scss file which was automatically created when generating scaffolds
+
+commit c43e89031ab806214b52cfc95d1fd987de37b168
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:35:08 2021 +1000
+
+    Generate Artist scaffold, add association, migrate database
+
+commit 0c4d368a733c81840196f24baa5f9cee4051e2fd
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:31:13 2021 +1000
+
+    Migrate database for Orderitems.Other migrations were done under prior commmit
+
+commit 8f15fcda3c69e731e66a88664157117eaa00e986
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Sat Mar 13 17:29:35 2021 +1000
+
+    Generate scaffolds for Customer, Order, Orderitem and add associations.
+
+commit a2514878f3f81b6505b59f12bbd9dd5437e3010f
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Fri Mar 12 15:49:16 2021 +1000
+
+    add viewport meta tag to application.html.erb
+
+commit 65e279e8d2f58b99ef9d66c9c22019ec0ab467e5
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Fri Mar 12 15:07:29 2021 +1000
+
+    added profiles route
+
+commit 63c547f6a7c183df9af90776438924d626f96546
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 16:58:32 2021 +1000
+
+    Add table class to table in views> profiles>  index.html.erb
+
+commit 52d0f72f1516cd5f7d92629c22015c7f194062fd
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 16:27:13 2021 +1000
+
+    Add country select gem for simple form
+
+commit ae80b1189469ef38f1e46c46962a351767cb417e
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 15:36:57 2021 +1000
+
+    Generate scaffold Profile, migrate database and add associations
+
+commit 8f6aeb9a9352ad2e6d4ea24ac958100cb661d095
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 14:42:25 2021 +1000
+
+    Add jumbotron to home page
+
+commit 4577d4cf49da4a39434aeca5f7e55b370b17a720
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 14:21:00 2021 +1000
+
+    Create Navbar
+
+commit aff62a979e9ce20170f2ee3d91c6e82625989f41
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:56:36 2021 +1000
+
+    Update Bootstrap to version 4.5.2 and related changes
+
+commit 06f29e134c108a36e38f5070ba560fa9fcd72881
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:40:10 2021 +1000
+
+    Install devise, generate User model, migrate database, run server and check that it works
+
+commit 5f64f7e1512a36bafdc0d24b891570960eac9d63
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:25:31 2021 +1000
+
+    Install Simple Form gem
+
+commit e7b6aa4d725d865a2f186cfe208c702c13705217
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:22:21 2021 +1000
+
+    Install Bootstrap 3 for Sass gem and verify that it works by running rails server noting font change
+
+commit e8f2ff415dadac2d5b299b75ac0bcbfbe2fc19ef
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 13:07:02 2021 +1000
+
+    Generate home page controller
+
+commit a3eead6e3325eda95aa0473631b088df7b00e438
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 12:59:38 2021 +1000
+
+    First database migrate
+
+commit 57e490ec65665259ed52a7fc29e9bd6b301df350
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 12:53:15 2021 +1000
+
+    Update database.yml file with username, password, localhost and port 5432
+
+commit c470f7b185105c61356a6e3fe74976abafa3a68a
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Thu Mar 11 12:50:10 2021 +1000
+
+    New rails app intitialized, first commit

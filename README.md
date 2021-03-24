@@ -87,7 +87,7 @@ Direct purchase and sale.
 
 ## R9:	A link (URL) to the deployed app (i.e. website) ##
 
-## R10	A link to the GitHub repository (repo).##
+## R10	A link to the GitHub repository (repo). ##
 
 ## R11:	Description of your marketplace app (website), including: ##
 ### Purpose ###
@@ -118,7 +118,11 @@ Proposed additions:
 ![Edit](/app/assets/images/editing.PNG)
 ![Destroy](/app/assets/images/destroy.PNG)
 ![Artmedia](/app/assets/images/artmedia.PNG)
+Cloudinary images:
+![Coudinary site](/app/assets/images/cloudinarysite.PNG)
+PGAdmin:
 
+![PGAdmin](/app/assets/images/pgadmin.PNG)
 ###  Target audience ### 
 ###  Tech stack ### 
 
@@ -128,13 +132,15 @@ Proposed additions:
 - Balsamiq used to create Wireframes
 - PGAdmin to view database 
 ##### Development & Database ##### 
-- Ruby on Rails (including HTML and SCSS)
+- Ruby 2.7.1p83 
+- Rails 6.1.3 (including HTML and SCSS)
 - PostgreSQL 
 ##### Gems ##### 
 - Bootstrap (Front-end styling)
 - Devise (Authentication)
 - Rolify (Authorisation)
 - Simple Form
+![Custom gems](/app/assets/images/customgems.PNG)
 ##### Image Upload ##### 
 - Cloudinary 
 - Rails Active Storage

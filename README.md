@@ -70,6 +70,7 @@ It is difficult to capitalise on creativity but creative works are also vulnerab
 Artists would benefit from earning a higher income to continue their pursuit of the arts. In traditional gallery models, the profits often accumulate to the galleries that pick a limited few artists to represent and promote. Collectors and galleries sometimes work together to inflate art prices though this is not always to the benefit of the artist themselves. Customers should also have access to a wide range of art, beyond what a traditional model may select to promote. A wider selection of art enables more customers to enjoy it, and more sellers to profit without incurring commission fee charges.
 
 ## R9:	A link (URL) to the deployed app (i.e. website) ##
+https://murmuring-atoll-56343.herokuapp.com/
 
 ## R10	A link to the GitHub repository (repo). ##
 https://github.com/Ellezique/Artize-

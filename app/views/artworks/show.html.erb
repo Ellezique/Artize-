@@ -46,7 +46,10 @@
         <%= link_to 'Buy Now', new_order_path(artwork_id: @artwork.id), class:"btn btn-primary btn-sm" %>
       </p>
 
-      <%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> |
+       <% if current_user.has_role?(:admin) || @artwork.user == current_user %> 
+        <%= link_to 'Edit', edit_artwork_path(@artwork), class:"btn btn-primary btn-sm" %> 
+      <% end %>
+
       <%= link_to 'Back', artworks_path, class:"btn btn-primary btn-sm" %>
   </div>
 </div>

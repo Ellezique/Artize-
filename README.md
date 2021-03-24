@@ -1,28 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # T2A2 - Marketplace Project 
 #### Artize: an online gallery for users to buy and sell art.
 ###### By Gizelle v.Z
@@ -31,7 +8,7 @@ Things you may want to cover:
 Please ensure that you:
 - have Ruby on Rails and PostgreSQL installed and setup on your computer;
 - are familiar with command line (terminal); and
-- Have a default text editor (e.g. Visual Studio Code) installed and setup.
+- Have a default text editor (e.g. Visual Studio Code) installed and set up.
 ####Clone from Github Repositry
 - Clone to your local development environment:
     - Go to this application's github repository. Select the green "Code" button, which will then display a drop down menu. From the drop down menu, select "Download ZIP".
@@ -51,12 +28,15 @@ Please ensure that you:
         password: xxxxxxxx
         host: localhost
         port: 5432
-- Setup the database and populate presetdata from the seeds file by running the following commands in terminal:
+- Setup the database and populate preset data from the seeds file by running the following commands in terminal:
     $`rails db:reset` 
 
     $`rails db:migrate` 
 
     $`rails db:seed`
+
+Note that the application seed file does not include images. You need to add these manually in the app but you can edit the artworks entries. 
+You may also wish to set up your own cloudinary account and add your credentials to the app.
 
 #### Confirm proper installation and setup
 - Start your server by running:
@@ -65,33 +45,39 @@ Please ensure that you:
 - The page should load without error.
 
 #### Admin credentials for authorization
-- In the application, sign up as a new user by submitting your email and password.
-- In terminal, run rails consol:
-    `rails c`
-- You can see all users by running:
-    `User.all`
-- You created the last user. Assign an admin roll to the last user.
-    `User.last.add_role :admin`
+- The seeds file has created admin user credentials. You may use these credentials to log in and access the full application. 
+- Feel free to create your own user credentials with sign up. 
+- To assign admin privileges to your last created sign up:
+
+    In the application, sign up as a new user by submitting your email and password.
+    - In terminal, run rails consol:
+        `rails c`
+    - You can see all users by running:
+        `User.all`
+    - You created the last user. Assign an admin roll to the last user.
+        `User.last.add_role :admin`
 
 
 ## R7:	Identification of the problem solved by building this particular marketplace app. ##
-buy and sell
-commission
+This app is competing with the traditional art gallery model. Art galleries (physical and online) charge significant commission fees for selling art. Additionally, there is an exclusivity and discrimination where galleries select a few limited artists to promote and dismiss other talented artists who then have more difficulty selling their work. Resale of art is also encouraged and accordingly, the app is not limited to only artists selling art but is open to anyone wishing to resell art. 
 
-Show all artworks - more buyers and sellers might join the site 
-By requiring log in first, a user must go to the effort of signing up before proceeding. Whilst exclusivity is in no way a driving force of this web application, it is hoped that the log in requirement will offer some copyright protection for artists whose artworks are being sold on this web app.
+The purpose of this app is to allow artists (and other art sellers) to sell art to customers directly without the additional commission fees.
+The ultimate goal is for prominent users to be assigned admin privileges so that an art community can eventually take over and manage the site themselves, thus eliminating the need for traditional gallery models. The app could potentially reduce the cost of art whilst also increasing the profit from sales, simply by eliminating the traditional commission fees.
+
+It is difficult to capitalise on creativity but creative works are also vulnerable to intellectual property rights violations. It is hoped that the log in requirement will offer some copyright protection for artists whose artworks are being sold on this web app. The artworks are not visible unless a user has signed up and logged in. This log in barrier should in theory filter out some users who have no interest in buying or selling art. On the other hand, community involvement will be paramount in generating listings, traffic and sales. 
+
 ## R8:	Why is it a problem that needs solving? ##
-Difficult to capitalise on creativity. Need to protect artist's IP.
-Galleries (online and physical) take a lot of commission from artists.
-Direct purchase and sale.
+Artists would benefit from earning a higher income to continue their pursuit of the arts. In traditional gallery models, the profits often accumulate to the galleries that pick a limited few artists to represent and promote. Collectors and galleries sometimes work together to inflate art prices though this is not always to the benefit of the artist themselves. Customers should also have access to a wide range of art, beyond what a traditional model may select to promote. A wider selection of art enables more customers to enjoy it, and more sellers to profit without incurring commission fee charges.
 
 ## R9:	A link (URL) to the deployed app (i.e. website) ##
 
 ## R10	A link to the GitHub repository (repo). ##
+https://github.com/Ellezique/Artize-
 
 ## R11:	Description of your marketplace app (website), including: ##
 ### Purpose ###
-Buy and sell art direct wihtout commission.
+An online gallery where users can buy and sell artworks to each other.
+
 ### Functionality / features ### 
 "Only admin can edit or delete an artist. A user can create an artist but cannot edit or delete. Deleting an artist deletes all work by that artist."
 
@@ -121,9 +107,13 @@ Proposed additions:
 Cloudinary images:
 ![Coudinary site](/app/assets/images/cloudinarysite.PNG)
 PGAdmin:
-
 ![PGAdmin](/app/assets/images/pgadmin.PNG)
+
 ###  Target audience ### 
+Artists who wish to sell their artworks.
+Other sellers who wish to resell artworks.
+Customers who wish to buy artworks.
+
 ###  Tech stack ### 
 
 ##### Project Management, Planning and Software ##### 
@@ -150,6 +140,9 @@ PGAdmin:
 - Heroku
 
 ### R12:	User stories for your app ### 
+
+
+
 ### R13:	Wireframes for your app ### 
 ![Wireframes](/app/assets/images/artizewireframes.png)
 
@@ -161,11 +154,16 @@ The final ERD has a much simpler design. Devise was used to create Users. Stripe
 ![ERD](/app/assets/images/artizeerdfinal.png)
 
 ### R15:	Explain the different high-level components (abstractions) in your app ### 
+Explanation of what is happening in rails, what is the framework, what is the database and how do they interact. OR ActiveRecord and ActiveCOntroller. Either of these interpretations are fine. 
+
 ### R16:	Detail any third party services that your app will use ###
 ### R17:	Describe your projects models in terms of the relationships (active record associations) they have with each other ### 
 ### R18:	Discuss the database relations to be implemented in your application ###
-### R19	Provide your database schema design ###
-### R20	Describe the way tasks are allocated and tracked in your project ###
+### R19:	Provide your database schema design ###
+![Schema 1 of 3](/app/assets/images/schemaone.PNG)
+![Schema 2 of 3](/app/assets/images/schematwo.PNG)
+![Schema 3 of 3](/app/assets/images/schemathree.PNG)
+### R20:	Describe the way tasks are allocated and tracked in your project ###
 Trello Board was utilised to track tasks and progress during planning and development. The board can be accessed online here: 
 https://trello.com/b/dkOuEH0Y/artize-marketplace-erd
 

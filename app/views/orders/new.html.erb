@@ -16,16 +16,15 @@
     </tbody>
 </table>
 
-<button id="pay-now">Checkout</button>
+<button
+  data-stripe="payment"
+  data-public-key="<%= ENV["STRIPE_PK_TEST"] %>"
+  data-session-id="<%= @session.id %>"
+>
+Buy Now!
+</button>
 
 <script src="https://js.stripe.com/v3/"></script>
+<%= javascript_pack_tag 'stripe-checkout' %>
 
-<script>
-    const stripe = Stripe('<%= ENV["STRIPE_PK_TEST"] %>')
 
-    function redirectToStripe() {
-        stripe.redirectToCheckout({ sessionId: '<%= @session.id %>'})
-    }
-
-    document.querySelector("#pay-now").addEventListener("click", redirectToStripe)
-</script>

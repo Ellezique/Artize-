@@ -28,7 +28,7 @@ class ArtworksController < ApplicationController
     
     @artwork = Artwork.new(artwork_params)
     @artwork.artimage.attach(artwork_params[:artimage]) 
-
+    @artwork.user_id = current_user.id
     respond_to do |format|
       if @artwork.save
         format.html { redirect_to @artwork, notice: "Artwork was successfully created." }

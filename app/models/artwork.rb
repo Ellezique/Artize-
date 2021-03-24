@@ -1,5 +1,5 @@
 class Artwork < ApplicationRecord
-  #belongs_to :user
+  belongs_to :user
   belongs_to :artist
   has_many :artworks_styles, dependent: :destroy
   has_many :styles, through: :artworks_styles

@@ -11,7 +11,8 @@
     <%= f.number_field :price, label: "Price", min: 0, max: 999999, step: 0.05 %>
     <%= f.association :styles, collection: Style.order(:style), label: "Select Styles: ", as: :check_boxes, label_method: :style, value_method: :id %>
     <%= f.association :artmedia, collection: Artmedium.order(:artmedium), label: "Select Media: ", as: :check_boxes, label_method: :artmedium, value_method: :id %>
-  
+   
+   
   </div>
 
    <div class="form-actions">

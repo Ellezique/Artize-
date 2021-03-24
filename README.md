@@ -297,10 +297,6 @@ I have referred to validation above (e.g. stripe interprets price in cents). I a
       has_many :artworks
 
 
-
-
-
-
 ### R18:	Discuss the database relations to be implemented in your application ###
 
 Please refer to the final ERD above as well as the models code. a short summary of the relationships are:

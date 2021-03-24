@@ -1,3 +1,15 @@
+commit d5e483c736436e457a607f6200d4651fe3e66673
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 24 21:54:15 2021 +1000
+
+    App finished
+
+commit acff4d724bec0334d435fbf284cac33fe762eca4
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 24 21:24:25 2021 +1000
+
+    Finish README
+
 commit dae91b808318014f78391fffd6437a719ad068a3
 Author: Ellezique <gizellevanzyl@gmail.com>
 Date:   Wed Mar 24 18:18:00 2021 +1000

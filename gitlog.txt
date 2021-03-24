@@ -1,3 +1,9 @@
+commit dae91b808318014f78391fffd6437a719ad068a3
+Author: Ellezique <gizellevanzyl@gmail.com>
+Date:   Wed Mar 24 18:18:00 2021 +1000
+
+    Only admin or user who created artwork are able to edit or destroy the artwork.
+
 commit 9a9a15722f00b67239ba8e0840d1c5cb862ba204
 Author: Ellezique <gizellevanzyl@gmail.com>
 Date:   Wed Mar 24 16:05:03 2021 +1000

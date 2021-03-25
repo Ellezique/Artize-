@@ -9,11 +9,11 @@ Please ensure that you:
 - have Ruby on Rails and PostgreSQL installed and setup on your computer;
 - are familiar with command line (terminal); and
 - Have a default text editor (e.g. Visual Studio Code) installed and set up.
-####Clone from Github Repositry
+#### Clone from Github Repositry
 - Clone to your local development environment:
     - Go to this application's github repository. Select the green "Code" button, which will then display a drop down menu. From the drop down menu, select "Download ZIP".
     - PC: Once the zip folder has downloaded, right click on the zip folder and select "Extract All" from the dropdown menu. You may then choose where you would like to save the extracted folder on your PC, but keep all these files together because they contain everything from the repository. Mac: You can unzip the folder from Finder. Click the unzip button and select "unzip" from the dropdown menu and select where you would like to extract the folder to. A Finder window will open. Select "unzip the entire zip file".
-####Command Line
+#### Command Line
 - Open your command line (terminal) and navigate to the directory where you saved the clone in your local environment.
 - Install dependencies by running the following in your command line terminal:
        $  `bundle install`
@@ -21,7 +21,7 @@ Please ensure that you:
         $ `yarn install --check-files`
 - Open the directory in your default text editor:
         $ `code .`
-####PostgreSQL database setup
+#### PostgreSQL database setup
 - Open your database.yml file and customise the following to your specifications, e.g:
 
         username: postgres    
